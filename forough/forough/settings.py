@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-70n+()o0^7cmlrz_4hy=qir3p1c(oq_2jl@g)zz7@wl81sm=k)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost' , '172.18.176.95']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,18 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms',
-    'users',
-    'organization',
-    'corpus',
-    'rosetta',  # NEW
-    'jalali_date',
+
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware', # new
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -62,16 +56,12 @@ ROOT_URLCONF = 'forough.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-t_main = BASE_DIR.resolve() / 'templates'
-print(t_main)
-t_users = os.path.join(BASE_DIR,'users' , 'templates' )
-t_organization = os.path.join(BASE_DIR,'organization' , 'templates' )
-t_corpus = os.path.join(BASE_DIR, 'corpus' , 'templates' )
+
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [t_main , t_users, t_organization ,t_corpus,],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -160,63 +150,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-
-LOGIN_URL = '/users/accounts/login'
-LOGIN_REDIRECT_URL = "dashboard"
-LOGOUT_REDIRECT_URL = "dashboard"
-AUTH_USER_MODEL = "users.CustomUser"  # new
-
-
-
-LOGGING = {
-        'formatters': {
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
-            'style': '{',
-        },
-    },
-
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'root': {
-        'handlers': ['console'],
-        'level': 'DEBUG',
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
-            'propagate': False,
-        },
-    },
-}
-
-# JALALI_DATE_DEFAULTS = {
-#    'Strftime': {
-#         'date': '%y/%m/%d',
-#         'datetime': '%H:%M:%S _ %y/%m/%d',
-#     },
-#     'Static': {
-#         'js': [
-#             # loading datepicker
-#             'admin/js/django_jalali.min.js',
-#             # OR
-#             # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.core.js',
-#             # 'admin/jquery.ui.datepicker.jalali/scripts/calendar.js',
-#             # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.datepicker-cc.js',
-#             # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.datepicker-cc-fa.js',
-#             # 'admin/js/main.js',
-#         ],
-#         'css': {
-#             'all': [
-#                 'admin/jquery.ui.datepicker.jalali/themes/base/jquery-ui.min.css',
-#             ]
-#         }
-#     },
-# }
