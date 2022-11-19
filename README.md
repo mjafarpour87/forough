@@ -162,7 +162,6 @@ To train your chatbot to respond to industry-relevant questions, you’ll probab
 
 ## References
 <ol>
-  <li>
-[ChatterBot: Build a Chatbot With Python](https://realpython.com/build-a-chatbot-python-chatterbot/#project-overview)
+  <li> [ChatterBot: Build a Chatbot With Python](https://realpython.com/build-a-chatbot-python-chatterbot/#project-overview)
   </li>
   </ol>
