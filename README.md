@@ -51,26 +51,14 @@ To get started with your chatbot project, create and activate a virtual environm
  With the installation out of the way, and ignoring some of the issues that the library currently has, you’re ready to get started! Create a new Python file, call it bot.py, and add the code that you need to get a basic chatbot up and running:
  ```
  # bot.py
-
-
 from chatterbot import ChatBot
-
-
 chatbot = ChatBot("Chatpot")
-
-
 exit_conditions = (":q", "quit", "exit")
-
 while True:
-
     query = input("> ")
-
     if query in exit_conditions:
-
         break
-
     else:
-
         print(f"🪴 {chatbot.get_response(query)}")
 ```
 After importing ChatBot in line 3, you create an instance of ChatBot in line 5. The only required argument is a name, and you call this one "Chatpot". No, that’s not a typo—you’ll actually build a chatty flowerpot chatbot in this tutorial! You’ll soon notice that pots may not be the best conversation partners after all.
@@ -102,7 +90,7 @@ During the first run, ChatterBot created a SQLite database file where it stored 
 ├── db.sqlite3-shm
 └── db.sqlite3-wal
 ```
-ChatterBot uses the default <code>SQLStorageAdapter</code> and creates a [SQLite file database](https://github.com/gunthercox/ChatterBot/blob/1.0/chatterbot/storage/sql_storage.py#L31) unless you specify a different [storage adapter] (https://chatterbot.readthedocs.io/en/stable/storage/index.html).
+ChatterBot uses the default <code>SQLStorageAdapter</code> and creates a [SQLite file database](https://github.com/gunthercox/ChatterBot/blob/1.0/chatterbot/storage/sql_storage.py#L31) unless you specify a different [storage adapter](https://chatterbot.readthedocs.io/en/stable/storage/index.html).
 
 ### Note
 The main database file is <code>db.sqlite3</code>, while the other two, ending with <code>-wal</code> and <code>-shm</code>, are temporary support files.
@@ -112,8 +100,57 @@ Because you said both hello and hi at the beginning of the chat, your chat-pot l
 Now that you’ve created a working command-line chatbot, you’ll learn how to train it so you can have slightly more interesting conversations.
 
 ## Step 2: Begin Training Your Chatbot
+In the previous step, you built a chatbot that you could interact with from your command line. The chatbot started from a clean slate and wasn’t very interesting to talk to.
 
-## Step 3: Train Your Chatbot on Custom Data and Start Chatting
+In this step, you’ll train your chatbot using <code>ListTrainer</code> to make it a little smarter from the start. You’ll also learn about built-in trainers that come with ChatterBot, including their limitations.
+
+Your chatbot doesn’t have to start from scratch, and ChatterBot provides you with a quick way to train your bot. You’ll use [ChatterBot’s ListTrainer](https://chatterbot.readthedocs.io/en/stable/training.html#training-via-list-data) to provide some conversation samples that’ll give your chatbot more room to grow:
+```
+# bot.py
+from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
+chatbot = ChatBot("Chatpot")
+trainer = ListTrainer(chatbot)
+trainer.train([
+    "Hi",
+    "Welcome, friend 🤗",
+])
+trainer.train([
+    "Are you a plant?",
+    "No, I'm the pot below the plant!",
+])
+exit_conditions = (":q", "quit", "exit")
+while True:
+    query = input("> ")
+    if query in exit_conditions:
+        break
+    else:
+        print(f"🪴 {chatbot.get_response(query)}")
+```
+In line 4, you import <code>ListTrainer</code>, to which you pass your <code>chatbot</code> on line 8 to create <code>trainer</code>.
+
+In lines 9 to 12, you set up the first training round, where you pass a list of two strings to <code>trainer.train()</code>. Using <code>.train()</code> injects entries into your database to build upon the graph structure that ChatterBot uses to choose possible replies.
+
+### Note
+If you pass an iterable with exactly two items to <code>ListTrainer.train()</code>, then ChatterBot considers the first item a statement and the second item an acceptable response.
+
+You can run more than one training session, so in lines 13 to 16, you add another statement and another reply to your chatbot’s database.
+
+If you now run the interactive chatbot once again using <code>python bot.py</code>, you can elicit somewhat different responses from it than before.
+
+The conversation isn’t yet fluent enough that you’d like to go on a second date, but there’s additional context that you didn’t have before! When you train your chatbot with more data, it’ll get better at responding to user inputs.
+
+The ChatterBot library comes with [some corpora](https://github.com/gunthercox/chatterbot-corpus) that you can use to train your chatbot. However, at the time of writing, there are some issues if you try to use these resources straight out of the box.
+
+### Note
+
+The issues come from mismatches between versions of the dependencies, as well as the Python version that you use. You can work around them, but it’ll require some fiddling on your end.
+
+Alternatively, you could parse the corpus files yourself using [pyYAML](https://realpython.com/python-yaml/) because they’re stored as [YAML files](https://github.com/gunthercox/chatterbot-corpus/blob/master/chatterbot_corpus/data/english/computers.yml).
+
+While the provided corpora might be enough for you, in this tutorial you’ll skip them entirely and instead learn how to adapt your own conversational input data for training with ChatterBot’s <code>ListTrainer</code>.
+
+To train your chatbot to respond to industry-relevant questions, you’ll probably need to work with custom data, for example from existing support requests or chat logs from your company.
 
 ## Step 4: Create a shell on Chatbot training Engine
 
