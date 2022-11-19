@@ -49,6 +49,31 @@ To get started with your chatbot project, create and activate a virtual environm
  After the installation is complete, running <code>python -m pip freeze </code> should bring up list of installed dependencies that’s similar to what you can find in the provided code’s <code>requirements.txt</code> file.
  
  With the installation out of the way, and ignoring some of the issues that the library currently has, you’re ready to get started! Create a new Python file, call it bot.py, and add the code that you need to get a basic chatbot up and running:
+ ```
+ # bot.py
+
+
+from chatterbot import ChatBot
+
+
+chatbot = ChatBot("Chatpot")
+
+
+exit_conditions = (":q", "quit", "exit")
+
+while True:
+
+    query = input("> ")
+
+    if query in exit_conditions:
+
+        break
+
+    else:
+
+        print(f"🪴 {chatbot.get_response(query)}")
+        ```
+After importing ChatBot in line 3, you create an instance of ChatBot in line 5. The only required argument is a name, and you call this one "Chatpot". No, that’s not a typo—you’ll actually build a chatty flowerpot chatbot in this tutorial! You’ll soon notice that pots may not be the best conversation partners after all.
 
 ## Step 2: Begin Training Your Chatbot
 
