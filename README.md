@@ -38,6 +38,17 @@ To get started with your chatbot project, create and activate a virtual environm
   PS> venv\Scripts\activate
  (venv) PS> python -m pip install chatterbot==1.0.4 pytz
  ```
+ ### Linux & Mac OS
+ ```
+ $ python -m venv venv
+ $ source venv/bin/activate
+ (venv) $ python -m pip install chatterbot==1.0.4 pytz
+```
+ 
+ Running these commands in your terminal application installs ChatterBot and its dependencies into a new Python virtual environment.
+ After the installation is complete, running <code>python -m pip freeze </code> should bring up list of installed dependencies that’s similar to what you can find in the provided code’s <code>requirements.txt</code> file.
+ 
+ With the installation out of the way, and ignoring some of the issues that the library currently has, you’re ready to get started! Create a new Python file, call it bot.py, and add the code that you need to get a basic chatbot up and running:
 
 ## Step 2: Begin Training Your Chatbot
 
