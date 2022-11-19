@@ -33,9 +33,11 @@ In this step, you’ll set up a virtual environment and install the necessary de
 To get started with your chatbot project, create and activate a virtual environment, then install chatterbot and pytz:
 ### Windows
 
-  ```PS> python -m venv venv
+  ```
+  PS> python -m venv venv
   PS> venv\Scripts\activate
  (venv) PS> python -m pip install chatterbot==1.0.4 pytz
+ ```
 
 ## Step 2: Begin Training Your Chatbot
 
