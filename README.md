@@ -72,8 +72,44 @@ while True:
     else:
 
         print(f"🪴 {chatbot.get_response(query)}")
-        ```
+```
 After importing ChatBot in line 3, you create an instance of ChatBot in line 5. The only required argument is a name, and you call this one "Chatpot". No, that’s not a typo—you’ll actually build a chatty flowerpot chatbot in this tutorial! You’ll soon notice that pots may not be the best conversation partners after all.
+In line 8, you create a <code>while</code> loop that’ll keep looping unless you enter one of the exit conditions defined in line 7. Finally, in line 13, you call <code>.get_response()</code> on the ChatBot instance that you created earlier and pass it the user input that you collected in line 9 and assigned to <code>query</code>.
+When you run this script, ChatterBot might download some data and language models associated with the [NLTK project](https://realpython.com/python-nltk-sentiment-analysis/). It’ll print some information about that to your console. Python won’t download this data again during subsequent runs.
+### Note
+
+The NLTK project installs the data that ChatterBot uses into a default location on your operating system:
+```
+    Windows: C:\nltk_data\
+    Linux: /usr/share/nltk_data/
+    macOS: /Users/<username>/nltk_data/
+```
+
+NLTK will automatically create the directory during the first run of your chatbot.
+If you’re ready to communicate with your freshly homegrown Chatbot, then you can go ahead and run the Python file:
+
+```
+$ python bot.py
+```
+fter the language models are set up, you’ll see the greater than sign (>) that you defined in bot.py as your input prompt. You can now start to interact with your chat bot.
+Even if your chat bot doesn’t have much to say yet, it’s already learning and growing. To test this out, stop the current session. You can do this by typing one of the exit conditions—":q", "quit", or "exit". Then start the chatbot another time. Enter a different message, and you’ll notice that the chatbot remembers what you typed during the previous run.
+
+During the first run, ChatterBot created a SQLite database file where it stored all your inputs and connected them with possible responses. There should be three new files that have popped up in your working directory:
+```
+./
+├── bot.py
+├── db.sqlite3
+├── db.sqlite3-shm
+└── db.sqlite3-wal
+```
+ChatterBot uses the default <code>SQLStorageAdapter</code> and creates a [SQLite file database](https://github.com/gunthercox/ChatterBot/blob/1.0/chatterbot/storage/sql_storage.py#L31) unless you specify a different [storage adapter] (https://chatterbot.readthedocs.io/en/stable/storage/index.html).
+
+### Note
+The main database file is <code>db.sqlite3</code>, while the other two, ending with <code>-wal</code> and <code>-shm</code>, are temporary support files.
+
+Because you said both hello and hi at the beginning of the chat, your chat-pot learned that it can use these messages interchangeably. That means if you chat a lot with your new chatbot, it’ll gradually have better replies for you. But improving its responses manually sounds like a long process!
+
+Now that you’ve created a working command-line chatbot, you’ll learn how to train it so you can have slightly more interesting conversations.
 
 ## Step 2: Begin Training Your Chatbot
 
@@ -86,3 +122,6 @@ After importing ChatBot in line 3, you create an instance of ChatBot in line 5. 
 ## Conclusion
 
 ## Next Steps
+
+## References
+
