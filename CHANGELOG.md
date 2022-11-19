@@ -4,11 +4,11 @@ All notable changes to this project will be documented in this file.
 ## v0.0.2-dev - Unreleased - 2022-11-02
 
 ### Improvements
+- Define chat api
 - Add CHANGELOG
-- Improve OrganizationUnit Model
-- Change path of static file
-- Add user profile page
-- Add getallperm command
+- Improve Setting by extend_setting
+
+
 
 
 ### Bug Fixes
