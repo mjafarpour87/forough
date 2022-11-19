@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>{% translate "Update Category Unit" %}</h1>
+
+<form  method="post">
+{% csrf_token %}
+{{ form.name|as_crispy_field }}
+
+
+<p></p>
+<input  type="submit" class="btn btn-success" value="{% translate 'Update' %}"  />
+</form>
+
+{% if 'view_type' in request.session %}
+  {% if request.session.view_type == 'table' %}
+    <p><a href="{% url 'category_list' %}">{% translate "Back" %}</a></p>
+  {% else %}
+    <p><a href="{% url 'category_list_card' %}">{% translate "Back" %}</a></p>
+  {% endif %}
+{% else %}
+<p>{% translate "Error in config session" %}</p>
+{% endif %}
+{% endblock %}

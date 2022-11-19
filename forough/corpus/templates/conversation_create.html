@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>{% translate "New Conversation" %}</h1>
+
+<form  method="post">
+{% csrf_token %}
+{{ form.category|as_crispy_field }}
+
+<div class="row">
+  <div class="col-md-6">
+    {{ form.statement|as_crispy_field }}
+  </div>
+  <div class="col-md-6">
+    {{ form.response|as_crispy_field }}
+  </div>
+</div>
+
+<p></p>
+<input  type="submit"  class="btn btn-success" value="{% translate 'Submit' %}"  />
+</form>
+
+{% if 'view_type' in request.session %}
+  {% if request.session.view_type == 'table' %}
+    <p><a href="{% url 'organization_list' %}">{% translate "Back" %}</a></p>
+  {% else %}
+    <p><a href="{% url 'organization_list_card' %}">{% translate "Back" %}</a></p>
+  {% endif %}
+{% else %}
+<p>{% translate "Error in config session" %}</p>
+{% endif %}
+
+{% endblock %}

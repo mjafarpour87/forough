@@ -1,0 +1,722 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-26 15:46+0430\n"
+"PO-Revision-Date: 2022-08-26 15:51+0000\n"
+"Last-Translator:   <admin@iums.ac.ir>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\corpus\models.py:7
+msgid "Category"
+msgstr ""
+
+#: .\corpus\models.py:14 .\corpus\templates\conversation_detail.html:8
+#: .\corpus\templates\conversation_list_card.html:32
+msgid "Statement"
+msgstr ""
+
+#: .\corpus\models.py:15 .\corpus\templates\conversation_detail.html:9
+#: .\corpus\templates\conversation_list_card.html:33
+msgid "Response"
+msgstr ""
+
+#: .\corpus\templates\category_confirm_delete.html:5
+#: .\corpus\templates\category_detail.html:12
+#: .\corpus\templates\category_list_card.html:37
+#: .\corpus\templates\category_list_table.html:42
+#: .\corpus\templates\conversation_confirm_delete.html:5
+#: .\corpus\templates\conversation_detail.html:13
+#: .\corpus\templates\conversation_list_card.html:38
+#: .\corpus\templates\conversation_list_table.html:46
+#: .\organization\templates\organization_confirm_delete.html:5
+#: .\organization\templates\organization_detail.html:13
+#: .\organization\templates\organization_list_card.html:39
+#: .\organization\templates\organization_list_table.html:46
+#: .\users\templates\crud\user_confirm_delete.html:6
+#: .\users\templates\crud\user_detail.html:30
+#: .\users\templates\crud\user_list_card.html:45
+#: .\users\templates\crud\user_list_table.html:46
+#, fuzzy
+#| msgid "delete"
+msgid "Delete"
+msgstr "delete"
+
+#: .\corpus\templates\category_confirm_delete.html:8
+#: .\corpus\templates\conversation_confirm_delete.html:8
+#: .\organization\templates\organization_confirm_delete.html:8
+#: .\users\templates\crud\user_confirm_delete.html:9
+msgid "Are you sure you want to delete?"
+msgstr "Are you sure you want to delete?"
+
+#: .\corpus\templates\category_confirm_delete.html:12
+#: .\corpus\templates\category_create.html:14
+#: .\corpus\templates\conversation_confirm_delete.html:12
+#: .\corpus\templates\conversation_create.html:23
+#: .\organization\templates\organization_confirm_delete.html:12
+#: .\organization\templates\organization_create.html:23
+#: .\users\templates\crud\user_confirm_delete.html:13
+#: .\users\templates\crud\user_create.html:61
+msgid "Submit"
+msgstr "Submit"
+
+#: .\corpus\templates\category_confirm_delete.html:17
+#: .\corpus\templates\category_confirm_delete.html:19
+#: .\corpus\templates\category_create.html:19
+#: .\corpus\templates\category_create.html:21
+#: .\corpus\templates\category_detail.html:17
+#: .\corpus\templates\category_detail.html:19
+#: .\corpus\templates\category_update.html:19
+#: .\corpus\templates\category_update.html:21
+#: .\corpus\templates\conversation_confirm_delete.html:17
+#: .\corpus\templates\conversation_confirm_delete.html:19
+#: .\corpus\templates\conversation_create.html:28
+#: .\corpus\templates\conversation_create.html:30
+#: .\corpus\templates\conversation_detail.html:18
+#: .\corpus\templates\conversation_detail.html:20
+#: .\corpus\templates\conversation_update.html:26
+#: .\corpus\templates\conversation_update.html:28
+#: .\organization\templates\organization_confirm_delete.html:17
+#: .\organization\templates\organization_confirm_delete.html:19
+#: .\organization\templates\organization_create.html:28
+#: .\organization\templates\organization_create.html:30
+#: .\organization\templates\organization_detail.html:18
+#: .\organization\templates\organization_detail.html:20
+#: .\organization\templates\organization_update.html:26
+#: .\organization\templates\organization_update.html:28
+#: .\users\templates\crud\user_confirm_delete.html:19
+#: .\users\templates\crud\user_confirm_delete.html:21
+#: .\users\templates\crud\user_create.html:67
+#: .\users\templates\crud\user_create.html:69
+#: .\users\templates\crud\user_detail.html:37
+#: .\users\templates\crud\user_detail.html:39
+#: .\users\templates\crud\user_update.html:64
+#: .\users\templates\crud\user_update.html:66
+#: .\users\templates\registration\login.html:15
+#: .\users\templates\registration\password_change_done.html:9
+#: .\users\templates\registration\password_change_form.html:14
+#: .\users\templates\registration\password_reset_complete.html:9
+#: .\users\templates\registration\password_reset_done.html:9
+#: .\users\templates\registration\password_reset_form.html:15
+#: .\users\templates\users\register.html:15
+msgid "Back"
+msgstr "Back"
+
+#: .\corpus\templates\category_confirm_delete.html:22
+#: .\corpus\templates\category_create.html:24
+#: .\corpus\templates\category_detail.html:22
+#: .\corpus\templates\category_list_card.html:18
+#: .\corpus\templates\category_list_table.html:22
+#: .\corpus\templates\category_update.html:24
+#: .\corpus\templates\conversation_confirm_delete.html:22
+#: .\corpus\templates\conversation_create.html:33
+#: .\corpus\templates\conversation_detail.html:23
+#: .\corpus\templates\conversation_list_card.html:18
+#: .\corpus\templates\conversation_list_table.html:22
+#: .\corpus\templates\conversation_update.html:31
+#: .\organization\templates\organization_confirm_delete.html:22
+#: .\organization\templates\organization_create.html:33
+#: .\organization\templates\organization_detail.html:23
+#: .\organization\templates\organization_list_card.html:18
+#: .\organization\templates\organization_list_table.html:22
+#: .\organization\templates\organization_update.html:31
+#: .\users\templates\crud\user_confirm_delete.html:24
+#: .\users\templates\crud\user_create.html:72
+#: .\users\templates\crud\user_detail.html:42
+#: .\users\templates\crud\user_list_card.html:19
+#: .\users\templates\crud\user_list_table.html:22
+#: .\users\templates\crud\user_update.html:69
+msgid "Error in config session"
+msgstr ""
+
+#: .\corpus\templates\category_create.html:7
+msgid "New Catgory"
+msgstr ""
+
+#: .\corpus\templates\category_detail.html:5
+#, fuzzy
+#| msgid "Drug Details"
+msgid "Category Details"
+msgstr "Drug Details"
+
+#: .\corpus\templates\category_detail.html:7
+#: .\corpus\templates\category_list_table.html:31
+msgid "Name"
+msgstr ""
+
+#: .\corpus\templates\category_detail.html:11
+#: .\corpus\templates\category_list_card.html:36
+#: .\corpus\templates\category_list_table.html:41
+#: .\corpus\templates\conversation_detail.html:12
+#: .\corpus\templates\conversation_list_card.html:37
+#: .\corpus\templates\conversation_list_table.html:45
+#: .\organization\templates\organization_detail.html:12
+#: .\organization\templates\organization_list_card.html:38
+#: .\organization\templates\organization_list_table.html:45
+#: .\users\templates\crud\user_detail.html:29
+#: .\users\templates\crud\user_list_card.html:44
+#: .\users\templates\crud\user_list_table.html:45
+msgid "Edit"
+msgstr ""
+
+#: .\corpus\templates\category_list_card.html:9
+msgid "Category Unit List"
+msgstr ""
+
+#: .\corpus\templates\category_list_card.html:13
+#: .\corpus\templates\category_list_table.html:17
+#: .\corpus\templates\conversation_list_card.html:13
+#: .\corpus\templates\conversation_list_table.html:17
+#: .\organization\templates\organization_list_card.html:13
+#: .\organization\templates\organization_list_table.html:17
+#: .\users\templates\crud\user_list_card.html:14
+#: .\users\templates\crud\user_list_table.html:17
+msgid "Change to card view"
+msgstr ""
+
+#: .\corpus\templates\category_list_card.html:15
+#: .\corpus\templates\category_list_table.html:19
+#: .\corpus\templates\conversation_list_card.html:15
+#: .\corpus\templates\conversation_list_table.html:19
+#: .\organization\templates\organization_list_card.html:15
+#: .\organization\templates\organization_list_table.html:19
+#: .\users\templates\crud\user_list_card.html:16
+#: .\users\templates\crud\user_list_table.html:19
+msgid "Change to table view"
+msgstr ""
+
+#: .\corpus\templates\category_list_card.html:35
+#: .\corpus\templates\category_list_table.html:40
+#: .\corpus\templates\conversation_list_card.html:36
+#: .\corpus\templates\conversation_list_table.html:44
+#: .\organization\templates\organization_list_card.html:37
+#: .\organization\templates\organization_list_table.html:44
+#: .\users\templates\crud\user_list_card.html:43
+#: .\users\templates\crud\user_list_table.html:44
+#, fuzzy
+msgid "Details"
+msgstr "Terminology Details"
+
+#: .\corpus\templates\category_list_card.html:46
+#: .\corpus\templates\conversation_list_card.html:47
+#: .\organization\templates\organization_list_card.html:48
+#: .\users\templates\crud\user_list_card.html:55
+msgid "More"
+msgstr "More"
+
+#: .\corpus\templates\category_list_card.html:54
+#: .\corpus\templates\category_list_table.html:50
+#: .\corpus\templates\conversation_list_card.html:55
+#: .\corpus\templates\conversation_list_table.html:54
+#: .\organization\templates\organization_list_card.html:56
+#: .\organization\templates\organization_list_table.html:54
+#: .\users\templates\crud\user_list_card.html:63
+#: .\users\templates\crud\user_list_table.html:54
+msgid "There are no any items !!!"
+msgstr ""
+
+#: .\corpus\templates\category_list_table.html:5
+#: .\corpus\templates\category_list_table.html:28
+#, fuzzy
+#| msgid "Drugs List"
+msgid "Category List"
+msgstr "Drugs List"
+
+#: .\corpus\templates\category_list_table.html:8
+msgid "New Category"
+msgstr ""
+
+#: .\corpus\templates\category_list_table.html:12
+msgid "Import Category List"
+msgstr ""
+
+#: .\corpus\templates\category_list_table.html:32
+#: .\corpus\templates\conversation_list_table.html:34
+#: .\organization\templates\organization_list_table.html:34
+#: .\users\templates\crud\user_list_table.html:34
+#, fuzzy
+#| msgid "Actions"
+msgid "Action"
+msgstr "Actions"
+
+#: .\corpus\templates\category_list_table.html:62
+#: .\corpus\templates\conversation_list_table.html:66
+#: .\organization\templates\organization_list_table.html:66
+#: .\users\templates\crud\user_list_table.html:66
+#, fuzzy
+#| msgid "previous"
+msgid "Previous"
+msgstr "previous"
+
+#: .\corpus\templates\category_list_table.html:75
+#: .\corpus\templates\conversation_list_table.html:79
+#: .\organization\templates\organization_list_table.html:79
+#: .\users\templates\crud\user_list_table.html:79
+msgid "Next"
+msgstr ""
+
+#: .\corpus\templates\category_update.html:6
+msgid "Update Category Unit"
+msgstr ""
+
+#: .\corpus\templates\category_update.html:14
+#: .\corpus\templates\conversation_update.html:21
+#: .\organization\templates\organization_update.html:21
+#: .\users\templates\crud\user_update.html:54
+msgid "Update"
+msgstr ""
+
+#: .\corpus\templates\conversation_create.html:7
+#, fuzzy
+#| msgid "New Insurance"
+msgid "New Conversation"
+msgstr "New Insurance"
+
+#: .\corpus\templates\conversation_detail.html:5
+#, fuzzy
+#| msgid "Drug Details"
+msgid "Conversation Details"
+msgstr "Drug Details"
+
+#: .\corpus\templates\conversation_detail.html:7
+#: .\corpus\templates\conversation_list_table.html:31
+msgid "category"
+msgstr ""
+
+#: .\corpus\templates\conversation_list_card.html:9
+#: .\corpus\templates\conversation_list_table.html:5
+#: .\corpus\templates\conversation_list_table.html:28
+#, fuzzy
+#| msgid "Drugs List"
+msgid "Conversation List"
+msgstr "Drugs List"
+
+#: .\corpus\templates\conversation_list_table.html:8
+msgid "New Conversation Unit"
+msgstr ""
+
+#: .\corpus\templates\conversation_list_table.html:12
+msgid "Import Conversation Unit List"
+msgstr ""
+
+#: .\corpus\templates\conversation_list_table.html:32
+msgid "statement"
+msgstr ""
+
+#: .\corpus\templates\conversation_list_table.html:33
+msgid "response"
+msgstr ""
+
+#: .\corpus\templates\conversation_update.html:6
+#: .\organization\templates\organization_update.html:6
+msgid "Update Organization Unit"
+msgstr ""
+
+#: .\forough\settings.py:135
+msgid "English"
+msgstr "English"
+
+#: .\forough\settings.py:136
+msgid "Persian"
+msgstr "Persian"
+
+#: .\forough\urls.py:12
+msgid "admin/"
+msgstr "admin/"
+
+#: .\organization\models.py:15
+msgid "Organization or Unit name"
+msgstr ""
+
+#: .\organization\models.py:16
+msgid "Type of Organization Unit"
+msgstr ""
+
+#: .\organization\models.py:18
+#, fuzzy
+#| msgid "delete"
+msgid "Deleted"
+msgstr "delete"
+
+#: .\organization\templates\organization_create.html:7
+#: .\organization\templates\organization_list_table.html:8
+msgid "New Organization Unit"
+msgstr ""
+
+#: .\organization\templates\organization_detail.html:5
+#, fuzzy
+#| msgid "Drug Details"
+msgid "Organization Details"
+msgstr "Drug Details"
+
+#: .\organization\templates\organization_detail.html:7
+#: .\organization\templates\organization_list_table.html:31
+msgid "Unit Name"
+msgstr ""
+
+#: .\organization\templates\organization_detail.html:8
+#: .\organization\templates\organization_list_card.html:33
+#: .\organization\templates\organization_list_table.html:32
+msgid "Unit Type"
+msgstr ""
+
+#: .\organization\templates\organization_detail.html:9
+#: .\organization\templates\organization_list_card.html:34
+#: .\organization\templates\organization_list_table.html:33
+msgid "Unit Parent"
+msgstr ""
+
+#: .\organization\templates\organization_list_card.html:9
+#: .\organization\templates\organization_list_table.html:5
+#: .\organization\templates\organization_list_table.html:28
+msgid "Organization Unit List"
+msgstr ""
+
+#: .\organization\templates\organization_list_table.html:12
+msgid "Import Organization Unit List"
+msgstr ""
+
+#: .\templates\index.html:30 .\templates\index.html:62
+#: .\templates\index1.html:14 .\templates\index1.html:100
+msgid "Site Title"
+msgstr "Forough"
+
+#: .\templates\index.html:74 .\templates\index.html:87
+#: .\templates\index1.html:110
+msgid "Home"
+msgstr "Home"
+
+#: .\templates\index.html:94 .\templates\index.html:107
+msgid "Conversation Category"
+msgstr ""
+
+#: .\templates\index.html:114 .\templates\index.html:127
+msgid "Conversation"
+msgstr ""
+
+#: .\templates\index.html:173 .\templates\index1.html:125
+msgid "Managment"
+msgstr ""
+
+#: .\templates\index.html:179 .\templates\index.html:193
+#: .\templates\index1.html:134
+msgid "User Managment"
+msgstr ""
+
+#: .\templates\index.html:200 .\templates\index.html:213
+#: .\templates\index1.html:132
+msgid "Organization Structure"
+msgstr ""
+
+#: .\templates\index.html:220 .\templates\index.html:235
+#: .\templates\index.html:263 .\templates\index1.html:128
+#, fuzzy
+#| msgid "language"
+msgid "Language"
+msgstr "language"
+
+#: .\templates\index.html:243 .\templates\index.html:258
+#: .\templates\index1.html:129
+msgid "Admin Panel"
+msgstr ""
+
+#: .\templates\index.html:341 .\templates\index1.html:164
+#: .\users\templates\users\dashboard.html:9
+msgid "Logout"
+msgstr "Logout"
+
+#: .\templates\index.html:346 .\templates\index1.html:167
+#: .\users\templates\registration\login.html:12
+#: .\users\templates\users\dashboard.html:12
+msgid "Login"
+msgstr "Login"
+
+#: .\templates\index.html:468
+msgid "Coded by Maryam Jafarpour."
+msgstr ""
+
+#: .\templates\index.html:474
+msgid "Maryam Jafarpour"
+msgstr ""
+
+#: .\templates\index.html:477
+msgid "University of Tehran"
+msgstr ""
+
+#: .\templates\index1.html:114
+msgid "language"
+msgstr "language"
+
+#: .\templates\index1.html:138
+msgid "Province"
+msgstr ""
+
+#: .\templates\index1.html:139
+msgid "County"
+msgstr ""
+
+#: .\templates\index1.html:140
+msgid "City"
+msgstr ""
+
+#: .\templates\index1.html:142
+#, fuzzy
+#| msgid "Insurance"
+msgid "Insurer"
+msgstr "Insurance"
+
+#: .\templates\index1.html:143
+#, fuzzy
+#| msgid "Insurance"
+msgid "Insurer Box"
+msgstr "Insurance"
+
+#: .\templates\index1.html:144
+msgid "Supplementary Insurance"
+msgstr ""
+
+#: .\templates\index1.html:150
+#, fuzzy
+#| msgid "Drugs List"
+msgid "Person List"
+msgstr "Drugs List"
+
+#: .\templates\index1.html:160 .\users\templates\users\dashboard.html:5
+msgid "Hello"
+msgstr "Hello"
+
+#: .\templates\index1.html:165
+#: .\users\templates\registration\password_change_form.html:6
+#: .\users\templates\users\dashboard.html:10
+msgid "Change password"
+msgstr "Change password"
+
+#: .\users\forms.py:16
+#, fuzzy
+#| msgid "Change password"
+msgid "Confirm Password"
+msgstr "Change password"
+
+#: .\users\forms.py:24 .\users\forms.py:64 .\users\models.py:38
+#: .\users\templates\crud\user_detail.html:24
+msgid "Birthdate"
+msgstr ""
+
+#: .\users\models.py:26
+#, python-format
+msgid "%(value)s is not a national code"
+msgstr "%(value)  is not a national code"
+
+#: .\users\models.py:39 .\users\templates\crud\user_detail.html:22
+msgid "Mobile Phone"
+msgstr ""
+
+#: .\users\models.py:40
+msgid ""
+"Required. Incorrect formatting may result in undelivered messages or a "
+"message being sent to an incorrect handset."
+msgstr ""
+
+#: .\users\models.py:44 .\users\templates\crud\user_detail.html:18
+msgid "Display Name"
+msgstr ""
+
+#: .\users\models.py:45
+msgid "Profile Image"
+msgstr ""
+
+#: .\users\models.py:46
+#, fuzzy
+#| msgid "Drug Details"
+msgid "Organization Unit"
+msgstr "Drug Details"
+
+#: .\users\templates\crud\user_create.html:9
+#: .\users\templates\crud\user_list_table.html:8
+msgid "New User"
+msgstr ""
+
+#: .\users\templates\crud\user_detail.html:7
+#, fuzzy
+#| msgid "Drug Details"
+msgid "User Details"
+msgstr "Drug Details"
+
+#: .\users\templates\crud\user_detail.html:17
+#: .\users\templates\crud\user_list_table.html:31
+msgid "Username"
+msgstr ""
+
+#: .\users\templates\crud\user_detail.html:19
+#: .\users\templates\crud\user_list_card.html:39
+#: .\users\templates\crud\user_list_table.html:32
+msgid "First Name"
+msgstr ""
+
+#: .\users\templates\crud\user_detail.html:20
+#: .\users\templates\crud\user_list_card.html:40
+#: .\users\templates\crud\user_list_table.html:33
+msgid "Last Name"
+msgstr ""
+
+#: .\users\templates\crud\user_detail.html:21
+msgid "Email"
+msgstr ""
+
+#: .\users\templates\crud\user_detail.html:23
+msgid "National Code"
+msgstr ""
+
+#: .\users\templates\crud\user_list_card.html:10
+#: .\users\templates\crud\user_list_table.html:5
+#: .\users\templates\crud\user_list_table.html:28
+#, fuzzy
+#| msgid "Drugs List"
+msgid "User List"
+msgstr "Drugs List"
+
+#: .\users\templates\crud\user_list_table.html:12
+msgid "Import User List"
+msgstr ""
+
+#: .\users\templates\crud\user_update.html:9
+msgid "Update User"
+msgstr ""
+
+#: .\users\templates\registration\login.html:7
+msgid "Login Page"
+msgstr "Login Page"
+
+#: .\users\templates\registration\login.html:16
+msgid "Reset password"
+msgstr "Reset password"
+
+#: .\users\templates\registration\login.html:17
+#: .\users\templates\users\register.html:7
+msgid "Register"
+msgstr "Register"
+
+#: .\users\templates\registration\password_change_done.html:7
+msgid "Password changed"
+msgstr "Password changed"
+
+#, fuzzy
+#~ msgid " County Details"
+#~ msgstr "Drug Details"
+
+#, fuzzy
+#~ msgid "New Insurer"
+#~ msgstr "Insurance"
+
+#, fuzzy
+#~ msgid "Insurer Details"
+#~ msgstr "Drug Details"
+
+#, fuzzy
+#~ msgid "Insurer Name"
+#~ msgstr "Insurance"
+
+#, fuzzy
+#~ msgid "Insurer List"
+#~ msgstr "Drugs List"
+
+#, fuzzy
+#~ msgid "Insurerbox Details"
+#~ msgstr "Drug Details"
+
+#, fuzzy
+#~ msgid "Insurerbox"
+#~ msgstr "Insurance"
+
+#, fuzzy
+#~ msgid "Insurerbox List"
+#~ msgstr "Drugs List"
+
+#, fuzzy
+#~ msgid "InsurerBox"
+#~ msgstr "Insurance"
+
+#, fuzzy
+#~ msgid "Job description"
+#~ msgstr "Description"
+
+#, fuzzy
+#~ msgid "Basic insurer"
+#~ msgstr "Insurance"
+
+#, fuzzy
+#~ msgid "Basic insurer box"
+#~ msgstr "Insurance"
+
+#, fuzzy
+#~ msgid "Personreg List"
+#~ msgstr "Drugs List"
+
+#, fuzzy
+#~ msgid "Basic insurer Box"
+#~ msgstr "Insurance"
+
+#, fuzzy
+#~ msgid "Update Personreg"
+#~ msgstr "New Insurance"
+
+#, fuzzy
+#~ msgid "New Province"
+#~ msgstr "New Insurance"
+
+#, fuzzy
+#~ msgid " Province Details"
+#~ msgstr "Drug Details"
+
+#, fuzzy
+#~ msgid "Update Province"
+#~ msgstr "New Insurance"
+
+#, fuzzy
+#~ msgid "Terminology"
+#~ msgstr "Terminology Details"
+
+#~ msgid "Value"
+#~ msgstr "Value"
+
+#~ msgid "Code"
+#~ msgstr "Code"
+
+#~ msgid "edit"
+#~ msgstr "edit"
+
+#~ msgid "delete"
+#~ msgstr "delete"
+
+#~ msgid "Django site admin"
+#~ msgstr "Django site admin"
+
+#~ msgid "Terms Table"
+#~ msgstr "Terms Table"
+
+#~ msgid "Drugs"
+#~ msgstr "Drugs"
+
+#~ msgid "next"
+#~ msgstr "next"
+
+#~ msgid "Terminology Details"
+#~ msgstr "Terminology Details"
+
+#~ msgid "Abbreviation"
+#~ msgstr "Abbreviation"
+
+#~ msgid "French"
+#~ msgstr "French"

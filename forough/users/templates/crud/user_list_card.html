@@ -1,0 +1,87 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load i18n %}
+
+
+{% block content %}
+
+<!-- container for showing book lists -->
+<div class="container">
+  <h1>{% translate "User List" %}</h1>
+
+  {% if 'view_type' in request.session %}
+  {% if request.session.view_type == 'table' %}
+    <p><a href="{% url 'user_list_card' %}">{% translate "Change to card view" %}</a></p>
+  {% else %}
+    <p><a href="{% url 'user_list' %}">{% translate "Change to table view" %}</a></p>
+  {% endif %}
+  {% else %}
+    <p>{% translate "Error in config session" %}</p>
+  {% endif %}
+
+
+  {% if ObjectList %}
+<div class="object-list">
+  <div class="row">
+          {% for o in ObjectList %}
+          <div class="col-sm-3">
+
+              <div class="card mb-3" >
+                  {% if o.image_avatar   %}
+                  <img src="{{ o.image_avatar.url}}" alt="{{ object.username }}" class="card-img-top">
+                  {% else %}
+                  <img src="{% static 'person.png' %}" alt="{{ object.username }}" class="card-img-top">
+                  {% endif %}
+                  <!-- <img src="{{ book.image.url }}" class="card-img-top" alt="..."> -->
+                  <div class="card-body">
+                      <h5 class="card-title">{{ o.username }}</h5>
+                      <!-- <p class="card-text">code : {{ d.code }}</p> -->
+                      <p class="card-text"><small class="text-muted"><strong>{% translate "First Name" %}</strong>: {{o.first_name}}</small></p>
+                      <p class="card-text"><small class="text-muted"><strong>{% translate "Last Name" %}</strong>: {{o.last_name}}</small></p>
+                  </div>
+                  <div class="card-footer">
+                    <a  href="{% url 'user_detail'  o.id  %}" class="btn btn-primary">{% translate "Details" %}</a>
+                    <a  href="{% url 'user_update'  o.id  %}" class="btn btn-primary">{% translate "Edit" %}</a>
+                    <a  href="{% url 'user_delete'  o.id  %}" class="btn btn-primary">{% translate "Delete" %}</a>
+                  </div>
+              </div>
+
+          </div>
+          {% endfor %}
+
+
+          {% if page_obj.has_next %}
+              <p class="pagination">
+                  <a class="next-page" href="?page={{ page_obj.next_page_number }}">{% translate "More" %}...</a>
+              </p>
+          {% endif %}
+
+  </div>
+
+      </div>
+  {% else %}
+      <p>{% translate "There are no any items !!!" %}</p>
+  {% endif %}
+</div>
+<!-- jQuery CDN hosted by Google -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- jScroll plug-in CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
+<script>
+  jQuery(function ($) {
+      var $list = $('.object-list');
+      $list.jscroll({
+          loadingHtml: '<div class="text-center">' +
+              '<img src="{% static "loading.gif" %}" alt="Loading" />' +
+              '</div>',
+          padding: 100,
+          pagingSelector: '.pagination',
+          nextSelector: 'a.next-page:last',
+          contentSelector: '.card,.pagination'
+      });
+  });
+</script>
+
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% translate "Conversation Details" %}</h1>
+
+<p><strong>{% translate "category" %}</strong>: {{object.category}}</p>
+<p><strong>{% translate "Statement" %}</strong>: {{object.statement}}</p>
+<p><strong>{% translate "Response" %}</strong>: {{object.response}}</p>
+
+<div>
+    <a  href="{% url 'conversation_update'  object.id  %}" class="btn btn-primary">{% translate "Edit" %}</a>
+    <a  href="{% url 'conversation_delete'  object.id  %}" class="btn btn-primary">{% translate "Delete" %}</a>
+</div>
+
+{% if 'view_type' in request.session %}
+  {% if request.session.view_type == 'table' %}
+    <p><a href="{% url 'conversation_list' %}">{% translate "Back" %}</a></p>
+  {% else %}
+    <p><a href="{% url 'conversation_list_card' %}">{% translate "Back" %}</a></p>
+  {% endif %}
+{% else %}
+<p>{% translate "Error in config session" %}</p>
+{% endif %}
+
+{% endblock %}

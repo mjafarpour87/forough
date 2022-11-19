@@ -1,0 +1,918 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-26 15:46+0430\n"
+"PO-Revision-Date: 2022-08-26 15:51+0000\n"
+"Last-Translator:   <admin@iums.ac.ir>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\corpus\models.py:7
+msgid "Category"
+msgstr "رده بندی"
+
+#: .\corpus\models.py:14 .\corpus\templates\conversation_detail.html:8
+#: .\corpus\templates\conversation_list_card.html:32
+msgid "Statement"
+msgstr "سئوال"
+
+#: .\corpus\models.py:15 .\corpus\templates\conversation_detail.html:9
+#: .\corpus\templates\conversation_list_card.html:33
+msgid "Response"
+msgstr "پاسخ"
+
+#: .\corpus\templates\category_confirm_delete.html:5
+#: .\corpus\templates\category_detail.html:12
+#: .\corpus\templates\category_list_card.html:37
+#: .\corpus\templates\category_list_table.html:42
+#: .\corpus\templates\conversation_confirm_delete.html:5
+#: .\corpus\templates\conversation_detail.html:13
+#: .\corpus\templates\conversation_list_card.html:38
+#: .\corpus\templates\conversation_list_table.html:46
+#: .\organization\templates\organization_confirm_delete.html:5
+#: .\organization\templates\organization_detail.html:13
+#: .\organization\templates\organization_list_card.html:39
+#: .\organization\templates\organization_list_table.html:46
+#: .\users\templates\crud\user_confirm_delete.html:6
+#: .\users\templates\crud\user_detail.html:30
+#: .\users\templates\crud\user_list_card.html:45
+#: .\users\templates\crud\user_list_table.html:46
+msgid "Delete"
+msgstr "حذف"
+
+#: .\corpus\templates\category_confirm_delete.html:8
+#: .\corpus\templates\conversation_confirm_delete.html:8
+#: .\organization\templates\organization_confirm_delete.html:8
+#: .\users\templates\crud\user_confirm_delete.html:9
+msgid "Are you sure you want to delete?"
+msgstr "آیا مطمئن هستید می خواهید پاک شود؟"
+
+#: .\corpus\templates\category_confirm_delete.html:12
+#: .\corpus\templates\category_create.html:14
+#: .\corpus\templates\conversation_confirm_delete.html:12
+#: .\corpus\templates\conversation_create.html:23
+#: .\organization\templates\organization_confirm_delete.html:12
+#: .\organization\templates\organization_create.html:23
+#: .\users\templates\crud\user_confirm_delete.html:13
+#: .\users\templates\crud\user_create.html:61
+msgid "Submit"
+msgstr "ثبت"
+
+#: .\corpus\templates\category_confirm_delete.html:17
+#: .\corpus\templates\category_confirm_delete.html:19
+#: .\corpus\templates\category_create.html:19
+#: .\corpus\templates\category_create.html:21
+#: .\corpus\templates\category_detail.html:17
+#: .\corpus\templates\category_detail.html:19
+#: .\corpus\templates\category_update.html:19
+#: .\corpus\templates\category_update.html:21
+#: .\corpus\templates\conversation_confirm_delete.html:17
+#: .\corpus\templates\conversation_confirm_delete.html:19
+#: .\corpus\templates\conversation_create.html:28
+#: .\corpus\templates\conversation_create.html:30
+#: .\corpus\templates\conversation_detail.html:18
+#: .\corpus\templates\conversation_detail.html:20
+#: .\corpus\templates\conversation_update.html:26
+#: .\corpus\templates\conversation_update.html:28
+#: .\organization\templates\organization_confirm_delete.html:17
+#: .\organization\templates\organization_confirm_delete.html:19
+#: .\organization\templates\organization_create.html:28
+#: .\organization\templates\organization_create.html:30
+#: .\organization\templates\organization_detail.html:18
+#: .\organization\templates\organization_detail.html:20
+#: .\organization\templates\organization_update.html:26
+#: .\organization\templates\organization_update.html:28
+#: .\users\templates\crud\user_confirm_delete.html:19
+#: .\users\templates\crud\user_confirm_delete.html:21
+#: .\users\templates\crud\user_create.html:67
+#: .\users\templates\crud\user_create.html:69
+#: .\users\templates\crud\user_detail.html:37
+#: .\users\templates\crud\user_detail.html:39
+#: .\users\templates\crud\user_update.html:64
+#: .\users\templates\crud\user_update.html:66
+#: .\users\templates\registration\login.html:15
+#: .\users\templates\registration\password_change_done.html:9
+#: .\users\templates\registration\password_change_form.html:14
+#: .\users\templates\registration\password_reset_complete.html:9
+#: .\users\templates\registration\password_reset_done.html:9
+#: .\users\templates\registration\password_reset_form.html:15
+#: .\users\templates\users\register.html:15
+msgid "Back"
+msgstr "بازگشت"
+
+#: .\corpus\templates\category_confirm_delete.html:22
+#: .\corpus\templates\category_create.html:24
+#: .\corpus\templates\category_detail.html:22
+#: .\corpus\templates\category_list_card.html:18
+#: .\corpus\templates\category_list_table.html:22
+#: .\corpus\templates\category_update.html:24
+#: .\corpus\templates\conversation_confirm_delete.html:22
+#: .\corpus\templates\conversation_create.html:33
+#: .\corpus\templates\conversation_detail.html:23
+#: .\corpus\templates\conversation_list_card.html:18
+#: .\corpus\templates\conversation_list_table.html:22
+#: .\corpus\templates\conversation_update.html:31
+#: .\organization\templates\organization_confirm_delete.html:22
+#: .\organization\templates\organization_create.html:33
+#: .\organization\templates\organization_detail.html:23
+#: .\organization\templates\organization_list_card.html:18
+#: .\organization\templates\organization_list_table.html:22
+#: .\organization\templates\organization_update.html:31
+#: .\users\templates\crud\user_confirm_delete.html:24
+#: .\users\templates\crud\user_create.html:72
+#: .\users\templates\crud\user_detail.html:42
+#: .\users\templates\crud\user_list_card.html:19
+#: .\users\templates\crud\user_list_table.html:22
+#: .\users\templates\crud\user_update.html:69
+msgid "Error in config session"
+msgstr "خطا در تنظیم نشست"
+
+#: .\corpus\templates\category_create.html:7
+#| msgid "New City"
+msgid "New Catgory"
+msgstr "رده بندی جدید"
+
+#: .\corpus\templates\category_detail.html:5
+#| msgid " City Details"
+msgid "Category Details"
+msgstr "جزئیات رده بندی"
+
+#: .\corpus\templates\category_detail.html:7
+#: .\corpus\templates\category_list_table.html:31
+msgid "Name"
+msgstr "عنوان"
+
+#: .\corpus\templates\category_detail.html:11
+#: .\corpus\templates\category_list_card.html:36
+#: .\corpus\templates\category_list_table.html:41
+#: .\corpus\templates\conversation_detail.html:12
+#: .\corpus\templates\conversation_list_card.html:37
+#: .\corpus\templates\conversation_list_table.html:45
+#: .\organization\templates\organization_detail.html:12
+#: .\organization\templates\organization_list_card.html:38
+#: .\organization\templates\organization_list_table.html:45
+#: .\users\templates\crud\user_detail.html:29
+#: .\users\templates\crud\user_list_card.html:44
+#: .\users\templates\crud\user_list_table.html:45
+msgid "Edit"
+msgstr "ویرایش"
+
+#: .\corpus\templates\category_list_card.html:9
+#| msgid "Organization Unit List"
+msgid "Category Unit List"
+msgstr "فهرست رده بندیها"
+
+#: .\corpus\templates\category_list_card.html:13
+#: .\corpus\templates\category_list_table.html:17
+#: .\corpus\templates\conversation_list_card.html:13
+#: .\corpus\templates\conversation_list_table.html:17
+#: .\organization\templates\organization_list_card.html:13
+#: .\organization\templates\organization_list_table.html:17
+#: .\users\templates\crud\user_list_card.html:14
+#: .\users\templates\crud\user_list_table.html:17
+msgid "Change to card view"
+msgstr "تغییر در نمایش به صورت کارت"
+
+#: .\corpus\templates\category_list_card.html:15
+#: .\corpus\templates\category_list_table.html:19
+#: .\corpus\templates\conversation_list_card.html:15
+#: .\corpus\templates\conversation_list_table.html:19
+#: .\organization\templates\organization_list_card.html:15
+#: .\organization\templates\organization_list_table.html:19
+#: .\users\templates\crud\user_list_card.html:16
+#: .\users\templates\crud\user_list_table.html:19
+msgid "Change to table view"
+msgstr "تغییردر نمایش به صورت جدول"
+
+#: .\corpus\templates\category_list_card.html:35
+#: .\corpus\templates\category_list_table.html:40
+#: .\corpus\templates\conversation_list_card.html:36
+#: .\corpus\templates\conversation_list_table.html:44
+#: .\organization\templates\organization_list_card.html:37
+#: .\organization\templates\organization_list_table.html:44
+#: .\users\templates\crud\user_list_card.html:43
+#: .\users\templates\crud\user_list_table.html:44
+msgid "Details"
+msgstr "جزئیات"
+
+#: .\corpus\templates\category_list_card.html:46
+#: .\corpus\templates\conversation_list_card.html:47
+#: .\organization\templates\organization_list_card.html:48
+#: .\users\templates\crud\user_list_card.html:55
+msgid "More"
+msgstr "بیشتر"
+
+#: .\corpus\templates\category_list_card.html:54
+#: .\corpus\templates\category_list_table.html:50
+#: .\corpus\templates\conversation_list_card.html:55
+#: .\corpus\templates\conversation_list_table.html:54
+#: .\organization\templates\organization_list_card.html:56
+#: .\organization\templates\organization_list_table.html:54
+#: .\users\templates\crud\user_list_card.html:63
+#: .\users\templates\crud\user_list_table.html:54
+msgid "There are no any items !!!"
+msgstr "موردی یافت نشد!!"
+
+#: .\corpus\templates\category_list_table.html:5
+#: .\corpus\templates\category_list_table.html:28
+#| msgid "City List"
+msgid "Category List"
+msgstr "فهرست رده بندی ها"
+
+#: .\corpus\templates\category_list_table.html:8
+#| msgid "New City"
+msgid "New Category"
+msgstr "رده بندی جدید"
+
+#: .\corpus\templates\category_list_table.html:12
+#, fuzzy
+#| msgid "Import City List"
+msgid "Import Category List"
+msgstr "بارگذاری فهرست شهرها"
+
+#: .\corpus\templates\category_list_table.html:32
+#: .\corpus\templates\conversation_list_table.html:34
+#: .\organization\templates\organization_list_table.html:34
+#: .\users\templates\crud\user_list_table.html:34
+msgid "Action"
+msgstr "عملیات"
+
+#: .\corpus\templates\category_list_table.html:62
+#: .\corpus\templates\conversation_list_table.html:66
+#: .\organization\templates\organization_list_table.html:66
+#: .\users\templates\crud\user_list_table.html:66
+msgid "Previous"
+msgstr "قبلی"
+
+#: .\corpus\templates\category_list_table.html:75
+#: .\corpus\templates\conversation_list_table.html:79
+#: .\organization\templates\organization_list_table.html:79
+#: .\users\templates\crud\user_list_table.html:79
+msgid "Next"
+msgstr "بعدی"
+
+#: .\corpus\templates\category_update.html:6
+#, fuzzy
+#| msgid "Update Organization Unit"
+msgid "Update Category Unit"
+msgstr "بروز رسانی واحد سازمانی"
+
+#: .\corpus\templates\category_update.html:14
+#: .\corpus\templates\conversation_update.html:21
+#: .\organization\templates\organization_update.html:21
+#: .\users\templates\crud\user_update.html:54
+msgid "Update"
+msgstr "ویرایش"
+
+#: .\corpus\templates\conversation_create.html:7
+#, fuzzy
+#| msgid "New Personreg"
+msgid "New Conversation"
+msgstr "پرونده جدید"
+
+#: .\corpus\templates\conversation_detail.html:5
+#, fuzzy
+#| msgid "Personreg Details"
+msgid "Conversation Details"
+msgstr "جزئیات پرونده"
+
+#: .\corpus\templates\conversation_detail.html:7
+#: .\corpus\templates\conversation_list_table.html:31
+msgid "category"
+msgstr "رده بندی"
+
+#: .\corpus\templates\conversation_list_card.html:9
+#: .\corpus\templates\conversation_list_table.html:5
+#: .\corpus\templates\conversation_list_table.html:28
+#, fuzzy
+#| msgid "Person List"
+msgid "Conversation List"
+msgstr "فهرست پرونده ها"
+
+#: .\corpus\templates\conversation_list_table.html:8
+#, fuzzy
+#| msgid "New County Unit"
+msgid "New Conversation Unit"
+msgstr "شهرستان جدید"
+
+#: .\corpus\templates\conversation_list_table.html:12
+#, fuzzy
+#| msgid "Import Organization Unit List"
+msgid "Import Conversation Unit List"
+msgstr "بارگذاری فهرست واحد سازمانی"
+
+#: .\corpus\templates\conversation_list_table.html:32
+msgid "statement"
+msgstr "سئوال"
+
+#: .\corpus\templates\conversation_list_table.html:33
+msgid "response"
+msgstr "پاسخ"
+
+#: .\corpus\templates\conversation_update.html:6
+#: .\organization\templates\organization_update.html:6
+msgid "Update Organization Unit"
+msgstr "بروز رسانی واحد سازمانی"
+
+#: .\forough\settings.py:135
+msgid "English"
+msgstr "انگلیسی"
+
+#: .\forough\settings.py:136
+msgid "Persian"
+msgstr "فارسی"
+
+#: .\forough\urls.py:12
+msgid "admin/"
+msgstr "ادمین/"
+
+#: .\organization\models.py:15
+msgid "Organization or Unit name"
+msgstr "نام سازمان  یا ساختار سازمانی"
+
+#: .\organization\models.py:16
+msgid "Type of Organization Unit"
+msgstr "نوع واحد سازمانی"
+
+#: .\organization\models.py:18
+#, fuzzy
+#| msgid "delete"
+msgid "Deleted"
+msgstr "حذف"
+
+#: .\organization\templates\organization_create.html:7
+#: .\organization\templates\organization_list_table.html:8
+msgid "New Organization Unit"
+msgstr "واحد سازمانی جدید"
+
+#: .\organization\templates\organization_detail.html:5
+msgid "Organization Details"
+msgstr "جزئیات واحد سازمان"
+
+#: .\organization\templates\organization_detail.html:7
+#: .\organization\templates\organization_list_table.html:31
+msgid "Unit Name"
+msgstr "نام سازمان  یا ساختار سازمانی"
+
+#: .\organization\templates\organization_detail.html:8
+#: .\organization\templates\organization_list_card.html:33
+#: .\organization\templates\organization_list_table.html:32
+msgid "Unit Type"
+msgstr "نوع واحد"
+
+#: .\organization\templates\organization_detail.html:9
+#: .\organization\templates\organization_list_card.html:34
+#: .\organization\templates\organization_list_table.html:33
+msgid "Unit Parent"
+msgstr "واحد بالاسری"
+
+#: .\organization\templates\organization_list_card.html:9
+#: .\organization\templates\organization_list_table.html:5
+#: .\organization\templates\organization_list_table.html:28
+msgid "Organization Unit List"
+msgstr "فهرست واحد سازمانی"
+
+#: .\organization\templates\organization_list_table.html:12
+msgid "Import Organization Unit List"
+msgstr "بارگذاری فهرست واحد سازمانی"
+
+#: .\templates\index.html:30 .\templates\index.html:62
+#: .\templates\index1.html:14 .\templates\index1.html:100
+msgid "Site Title"
+msgstr "فروغ"
+
+#: .\templates\index.html:74 .\templates\index.html:87
+#: .\templates\index1.html:110
+msgid "Home"
+msgstr "خانه"
+
+#: .\templates\index.html:94 .\templates\index.html:107
+msgid "Conversation Category"
+msgstr "رده بندی مکالمه"
+
+#: .\templates\index.html:114 .\templates\index.html:127
+msgid "Conversation"
+msgstr "مکالمه"
+
+#: .\templates\index.html:173 .\templates\index1.html:125
+msgid "Managment"
+msgstr "مدیریت"
+
+#: .\templates\index.html:179 .\templates\index.html:193
+#: .\templates\index1.html:134
+msgid "User Managment"
+msgstr "مدیریت کاربران"
+
+#: .\templates\index.html:200 .\templates\index.html:213
+#: .\templates\index1.html:132
+msgid "Organization Structure"
+msgstr "ساختار سازمانی"
+
+#: .\templates\index.html:220 .\templates\index.html:235
+#: .\templates\index.html:263 .\templates\index1.html:128
+msgid "Language"
+msgstr "زبان"
+
+#: .\templates\index.html:243 .\templates\index.html:258
+#: .\templates\index1.html:129
+msgid "Admin Panel"
+msgstr "پنل مدیریتی"
+
+#: .\templates\index.html:341 .\templates\index1.html:164
+#: .\users\templates\users\dashboard.html:9
+msgid "Logout"
+msgstr "خروج"
+
+#: .\templates\index.html:346 .\templates\index1.html:167
+#: .\users\templates\registration\login.html:12
+#: .\users\templates\users\dashboard.html:12
+msgid "Login"
+msgstr "ورود"
+
+#: .\templates\index.html:468
+msgid "Coded by Maryam Jafarpour."
+msgstr "تهیه شده توسط مریم جعفرپور"
+
+#: .\templates\index.html:474
+msgid "Maryam Jafarpour"
+msgstr "مریم جعفرپور"
+
+#: .\templates\index.html:477
+msgid "University of Tehran"
+msgstr "دانشگاه تهران"
+
+#: .\templates\index1.html:114
+msgid "language"
+msgstr "زبان"
+
+#: .\templates\index1.html:138
+msgid "Province"
+msgstr "استان"
+
+#: .\templates\index1.html:139
+msgid "County"
+msgstr "شهرستان"
+
+#: .\templates\index1.html:140
+msgid "City"
+msgstr "شهر"
+
+#: .\templates\index1.html:142
+msgid "Insurer"
+msgstr "بیمه"
+
+#: .\templates\index1.html:143
+msgid "Insurer Box"
+msgstr "صندوق بیمه"
+
+#: .\templates\index1.html:144
+msgid "Supplementary Insurance"
+msgstr "بیمه تکمیلی"
+
+#: .\templates\index1.html:150
+msgid "Person List"
+msgstr "فهرست پرونده ها"
+
+#: .\templates\index1.html:160 .\users\templates\users\dashboard.html:5
+msgid "Hello"
+msgstr "سلام"
+
+#: .\templates\index1.html:165
+#: .\users\templates\registration\password_change_form.html:6
+#: .\users\templates\users\dashboard.html:10
+msgid "Change password"
+msgstr "تغییر کلمه عبور"
+
+#: .\users\forms.py:16
+#, fuzzy
+#| msgid "Change password"
+msgid "Confirm Password"
+msgstr "تغییر کلمه عبور"
+
+#: .\users\forms.py:24 .\users\forms.py:64 .\users\models.py:38
+#: .\users\templates\crud\user_detail.html:24
+msgid "Birthdate"
+msgstr "تاریخ تولد"
+
+#: .\users\models.py:26
+#, python-format
+msgid "%(value)s is not a national code"
+msgstr "(value)% کد ملی نمی باشد"
+
+#: .\users\models.py:39 .\users\templates\crud\user_detail.html:22
+msgid "Mobile Phone"
+msgstr "تلفن همراه"
+
+#: .\users\models.py:40
+msgid ""
+"Required. Incorrect formatting may result in undelivered messages or a "
+"message being sent to an incorrect handset."
+msgstr ""
+"اجباری. قالب بندی نادرست ممکن است منجر به پیام های تحویل نشده یا ارسال پیام "
+"به یک گوشی نادرست شود."
+
+#: .\users\models.py:44 .\users\templates\crud\user_detail.html:18
+msgid "Display Name"
+msgstr "نام نمایشی"
+
+#: .\users\models.py:45
+msgid "Profile Image"
+msgstr "عکس پروفایل"
+
+#: .\users\models.py:46
+#, fuzzy
+#| msgid "New Organization Unit"
+msgid "Organization Unit"
+msgstr "واحد سازمانی جدید"
+
+#: .\users\templates\crud\user_create.html:9
+#: .\users\templates\crud\user_list_table.html:8
+msgid "New User"
+msgstr "کاربر جدید"
+
+#: .\users\templates\crud\user_detail.html:7
+msgid "User Details"
+msgstr "جزئیات کاربر"
+
+#: .\users\templates\crud\user_detail.html:17
+#: .\users\templates\crud\user_list_table.html:31
+msgid "Username"
+msgstr "نام کاربری"
+
+#: .\users\templates\crud\user_detail.html:19
+#: .\users\templates\crud\user_list_card.html:39
+#: .\users\templates\crud\user_list_table.html:32
+msgid "First Name"
+msgstr "نام"
+
+#: .\users\templates\crud\user_detail.html:20
+#: .\users\templates\crud\user_list_card.html:40
+#: .\users\templates\crud\user_list_table.html:33
+msgid "Last Name"
+msgstr "نام خانوادگی"
+
+#: .\users\templates\crud\user_detail.html:21
+msgid "Email"
+msgstr "پست الکترونیک"
+
+#: .\users\templates\crud\user_detail.html:23
+msgid "National Code"
+msgstr "کد ملی"
+
+#: .\users\templates\crud\user_list_card.html:10
+#: .\users\templates\crud\user_list_table.html:5
+#: .\users\templates\crud\user_list_table.html:28
+msgid "User List"
+msgstr "فهرست کاربرها"
+
+#: .\users\templates\crud\user_list_table.html:12
+msgid "Import User List"
+msgstr "بارگذاری فهرست کاربرها"
+
+#: .\users\templates\crud\user_update.html:9
+msgid "Update User"
+msgstr "ویرایش کاربر"
+
+#: .\users\templates\registration\login.html:7
+msgid "Login Page"
+msgstr "صفحه ورود"
+
+#: .\users\templates\registration\login.html:16
+msgid "Reset password"
+msgstr "تغییر کلمه عبور"
+
+#: .\users\templates\registration\login.html:17
+#: .\users\templates\users\register.html:7
+msgid "Register"
+msgstr "ثبت نام"
+
+#: .\users\templates\registration\password_change_done.html:7
+msgid "Password changed"
+msgstr "کلمه عبور تغییر داده شد."
+
+#~ msgid "No"
+#~ msgstr "خیر"
+
+#~ msgid "Yes"
+#~ msgstr "بله"
+
+#~ msgid "(Unknown)"
+#~ msgstr "نامشخص"
+
+#~ msgid "Male"
+#~ msgstr "مرد"
+
+#~ msgid "Female"
+#~ msgstr "زن"
+
+#~ msgid "Iran, Islamic Republic of"
+#~ msgstr "ایرانی"
+
+#~ msgid "Afghanistan"
+#~ msgstr "افغانی"
+
+#~ msgid "Iraq"
+#~ msgstr "عراقی"
+
+#~ msgid "Pakistan"
+#~ msgstr "پاکستانی"
+
+#~ msgid "Illiterate"
+#~ msgstr "بی سواد"
+
+#~ msgid "Diploma"
+#~ msgstr "دیپلم"
+
+#~ msgid "Bachelor"
+#~ msgstr "لیسانس"
+
+#~ msgid "Master"
+#~ msgstr "فوق لیسانس"
+
+#~ msgid "lives alone"
+#~ msgstr "به تنهایی زندگی می کند"
+
+#~ msgid "lives with family"
+#~ msgstr "با خانواده زندگی می کند"
+
+#~ msgid "Employed"
+#~ msgstr "شاغل"
+
+#~ msgid "Retired"
+#~ msgstr "بازنشسته"
+
+#~ msgid "Housewife"
+#~ msgstr "خانه دار"
+
+#~ msgid "Studying"
+#~ msgstr "در حال تحصیل"
+
+#~ msgid "Unemployed"
+#~ msgstr "بیکار"
+
+#~ msgid "Child"
+#~ msgstr "کودک"
+
+#~ msgid "Governmental"
+#~ msgstr "دولتی"
+
+#~ msgid "NonGovernmental"
+#~ msgstr "غیر دولتی"
+
+#~ msgid "Head and Neck"
+#~ msgstr "سر و گردن"
+
+#~ msgid "Head"
+#~ msgstr "سر"
+
+#~ msgid "Neck"
+#~ msgstr "گردن"
+
+#~ msgid "Face"
+#~ msgstr "صورت"
+
+#~ msgid "Natinal id of person"
+#~ msgstr "کد ملی "
+
+#~ msgid "New Supplementaryinsurance"
+#~ msgstr "بیمه تکمیلی جدید"
+
+#~ msgid "Supplementaryinsurance Details"
+#~ msgstr "جزئیات بیمه تکمیلی"
+
+#~ msgid "Supplementaryinsurance List"
+#~ msgstr "فهرست بیمه تکمیلی"
+
+#~ msgid "Import Supplementaryinsurance List"
+#~ msgstr "بارگذاری فهرست بیمه تکمیلی"
+
+#~ msgid "Update Supplementaryinsurance"
+#~ msgstr "ویرایش بیمه تکمیلی"
+
+#~ msgid "Update City"
+#~ msgstr "ویرایش شهر"
+
+#~ msgid "New County"
+#~ msgstr "شهرستان جدید"
+
+#~ msgid " County Details"
+#~ msgstr "جزئیات شهرستان"
+
+#~ msgid "County List"
+#~ msgstr "فهرست شهرستان"
+
+#~ msgid "Import County List"
+#~ msgstr "بارگذاری فهرست شهرستان"
+
+#~ msgid "Update County"
+#~ msgstr "ویرایش شهرستان"
+
+#~ msgid "New Insurer"
+#~ msgstr "بیمه جدید"
+
+#~ msgid "Insurer Details"
+#~ msgstr "جزئیات بیمه"
+
+#~ msgid "Insurer Name"
+#~ msgstr "عنوان بیمه"
+
+#~ msgid "Insurer List"
+#~ msgstr "فهرست بیمه ها"
+
+#~ msgid "Import Insurer List"
+#~ msgstr "بارگذاری فهرست بیمه ها"
+
+#~ msgid "Update Insurer"
+#~ msgstr "ویرایش بیمه"
+
+#~ msgid "New Insurerbox"
+#~ msgstr "صندوق بیمه جدید"
+
+#~ msgid "Insurerbox Details"
+#~ msgstr "جزئیات صندوق بیمه"
+
+#~ msgid "Insurerbox"
+#~ msgstr "صندوق بیمه"
+
+#~ msgid "Insurerbox List"
+#~ msgstr "فهرست صندوق های بیمه"
+
+#~ msgid "Import Insurerbox List"
+#~ msgstr "بارگذاری فهرست صندوق های بیمه"
+
+#~ msgid "InsurerBox"
+#~ msgstr "صندوق بیمه"
+
+#~ msgid "Update Insurerbox"
+#~ msgstr "ویرایش صندوق بیمه"
+
+#~ msgid "First name"
+#~ msgstr "نام"
+
+#~ msgid "Last name"
+#~ msgstr "نام خانوادگی"
+
+#~ msgid "Birth date"
+#~ msgstr "تاریخ تولد فرد"
+
+#~ msgid "Gender"
+#~ msgstr "جنسیت"
+
+#~ msgid "Mobile"
+#~ msgstr "موبایل"
+
+#~ msgid "Accompany mobile"
+#~ msgstr "تلفن موبایل همراه بیمار"
+
+#~ msgid "Father name"
+#~ msgstr "نام پدر"
+
+#~ msgid "Place of birth province"
+#~ msgstr "استان محل تولد"
+
+#~ msgid "Place of birth county"
+#~ msgstr "شهرستان محل تولد"
+
+#~ msgid "Place of birth city"
+#~ msgstr "شهر محل تولد"
+
+#~ msgid "Place of issue province"
+#~ msgstr "استان محل صدور"
+
+#~ msgid "Place of issue county"
+#~ msgstr "شهرستان محل صدور"
+
+#~ msgid "Place of issue city"
+#~ msgstr "شهر محل صدور"
+
+#~ msgid "Nationality"
+#~ msgstr "ملیت"
+
+#~ msgid "Degree of education"
+#~ msgstr "سطح تحصیلات"
+
+#~ msgid "Telephone"
+#~ msgstr "تلفن ثابت"
+
+#~ msgid "Life status"
+#~ msgstr "وضعیت زندگی"
+
+#~ msgid "Job status"
+#~ msgstr "وضعیت شغل"
+
+#~ msgid "Job type"
+#~ msgstr "نوع شغل"
+
+#~ msgid "Job income"
+#~ msgstr "میزان درآمد"
+
+#~ msgid "Job description"
+#~ msgstr "توضیحات شغل"
+
+#~ msgid "Looking for job"
+#~ msgstr "آیا تمایل به کار کردن دارید؟"
+
+#~ msgid "Basic insurer"
+#~ msgstr "بیمه پایه"
+
+#~ msgid "Basic insurer box"
+#~ msgstr "صندوق بیمه"
+
+#, fuzzy
+#~ msgid "Supplementary insurance"
+#~ msgstr "بیمه تکمیلی"
+
+#~ msgid "Burnt body part"
+#~ msgstr "مناطق سوخته بدن"
+
+#~ msgid "Personreg List"
+#~ msgstr "فهرست پرونده ها"
+
+#~ msgid "NationalCode"
+#~ msgstr "کد ملی"
+
+#~ msgid "Mobile phone"
+#~ msgstr "تلفن همراه فرد"
+
+#~ msgid "telephone"
+#~ msgstr "تلفن ثابت"
+
+#~ msgid "Import Personreg List"
+#~ msgstr "بارگذاری فهرست پرونده ها"
+
+#, fuzzy
+#~ msgid "Basic insurer Box"
+#~ msgstr "صندوق بیمه"
+
+#~ msgid "Update Personreg"
+#~ msgstr "ویرایش پرونده"
+
+#~ msgid "New Province"
+#~ msgstr "استان جدید"
+
+#~ msgid " Province Details"
+#~ msgstr "جزئیات استان"
+
+#~ msgid "Province List"
+#~ msgstr "فهرست استان"
+
+#~ msgid "Import Province List"
+#~ msgstr "بارگذاری فهرست استان"
+
+#~ msgid "Update Province"
+#~ msgstr "ویرایش استان"
+
+#, fuzzy
+#~ msgid "city List"
+#~ msgstr "فهرست"
+
+#~ msgid "Terminology"
+#~ msgstr "واژه شناسی"
+
+#~ msgid "Value"
+#~ msgstr "اصطلاح"
+
+#~ msgid "Code"
+#~ msgstr "کد"
+
+#~ msgid "edit"
+#~ msgstr "ویرایش"
+
+#~ msgid "delete"
+#~ msgstr "حذف"
+
+#~ msgid "Django site admin"
+#~ msgstr "سایت ادمین"
+
+#~ msgid "Terms Table"
+#~ msgstr "اصطلاحات پایه"
+
+#~ msgid "Drugs"
+#~ msgstr "داروها"
+
+#~ msgid "next"
+#~ msgstr "بعدی"
+
+#~ msgid "Terminology Details"
+#~ msgstr "جزئیات واژه شناسی"
+
+#~ msgid "Abbreviation"
+#~ msgstr "مخفف"
+
+#~ msgid "code"
+#~ msgstr "کد"
+
+#~ msgid "French"
+#~ msgstr "فرانسوی"

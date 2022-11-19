@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% translate "Category Details" %}</h1>
+
+<p><strong>{% translate "Name" %}</strong>: {{object.name}}</p>
+
+
+<div>
+    <a  href="{% url 'category_update'  object.id  %}" class="btn btn-primary">{% translate "Edit" %}</a>
+    <a  href="{% url 'category_delete'  object.id  %}" class="btn btn-primary">{% translate "Delete" %}</a>
+</div>
+
+{% if 'view_type' in request.session %}
+  {% if request.session.view_type == 'table' %}
+    <p><a href="{% url 'category_list' %}">{% translate "Back" %}</a></p>
+  {% else %}
+    <p><a href="{% url 'category_list_card' %}">{% translate "Back" %}</a></p>
+  {% endif %}
+{% else %}
+<p>{% translate "Error in config session" %}</p>
+{% endif %}
+
+{% endblock %}

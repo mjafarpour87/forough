@@ -1,0 +1,77 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load i18n %}
+
+{% load crispy_forms_tags %}
+{% load jalali_tags %}
+
+{% block content %}
+<h1>{% translate "Update User" %}</h1>
+
+<form  method="post" enctype="multipart/form-data">
+{% csrf_token %}
+
+<div >
+
+<div class="row g-3">
+  <div class="col-md-6">
+    {{ form.natinal_code|as_crispy_field }}
+  </div>
+  <div class="col-md-6">
+    {{ form.birth_date|as_crispy_field }}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    {{ form.display_name|as_crispy_field }}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    {{ form.first_name|as_crispy_field }}
+  </div>
+  <div class="col-md-6">
+    {{ form.last_name|as_crispy_field }}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    {{ form.email|as_crispy_field }}
+  </div>
+  <div class="col-md-6">
+    {{ form.mobile|as_crispy_field }}
+  </div>
+</div>
+{{ form.organization_unit|as_crispy_field }}
+{{ form.image_avatar|as_crispy_field }}
+
+</div>
+
+<p></p>
+<input  type="submit"  class="btn btn-success"   value="{% translate 'Update' %}"  />
+</form>
+{% if img_obj %}
+  <h3>Succesfully uploaded : {{img_obj.title}}</h3>
+  <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+{% endif %}
+
+
+{% if 'view_type' in request.session %}
+  {% if request.session.view_type == 'table' %}
+    <p><a href="{% url 'user_list' %}">{% translate "Back" %}</a></p>
+  {% else %}
+    <p><a href="{% url 'user_list_card' %}">{% translate "Back" %}</a></p>
+  {% endif %}
+{% else %}
+<p>{% translate "Error in config session" %}</p>
+{% endif %}
+
+<!-- By default, Datepicker using jQuery, you need to set your script after loading jQuery! -->
+	<!-- loading directly -->
+  <link rel="stylesheet" href="{% static 'admin/jquery.ui.datepicker.jalali/themes/base/jquery-ui.min.css' %}">
+  <script src="{% static 'admin/js/django_jalali.min.js' %}"></script>
+
+{% endblock %}
