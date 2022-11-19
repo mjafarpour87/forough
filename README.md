@@ -16,7 +16,27 @@ To get started, however, you won’t use a fork. Instead, you’ll use a specifi
 
 ## Prerequsites
 
+Before you get started, make sure that you have a Python version available that works for this ChatterBot project. What version of Python you need depends on your operating system:
+
+### Windows
+  You need to use a Python version below 3.8 to successfully work with the recommended version of ChatterBot in this tutorial. You can install Python 3.7.9 using pyenv-win.
+### Linux
+  You should be able to run the project on Ubuntu Linux with a variety of Python versions. However, if you bump into any issues, then you can try to install Python 3.7.9, for example using pyenv.
+### Mac OS
+  You can run the project with a variety of Python versions. The chatbot was built and tested with Python 3.10.7 but should also run with older Python versions.
+
+If you’ve installed the right Python version for your operating system, then you’re ready to get started.
+
 ## Step 1: Create a Chatbot Using Python ChatterBot
+In this step, you’ll set up a virtual environment and install the necessary dependencies. You’ll also create a working command-line chatbot that can reply to you—but it won’t have very interesting replies for you yet.
+
+To get started with your chatbot project, create and activate a virtual environment, then install chatterbot and pytz:
+### Windows
+<code>
+  PS> python -m venv venv
+  PS> venv\Scripts\activate
+  (venv) PS> python -m pip install chatterbot==1.0.4 pytz
+</code>. 
 
 ## Step 2: Begin Training Your Chatbot
 
