@@ -152,9 +152,9 @@ While the provided corpora might be enough for you, in this tutorial you’ll sk
 
 To train your chatbot to respond to industry-relevant questions, you’ll probably need to work with custom data, for example from existing support requests or chat logs from your company.
 
-## Step 4: Create a shell on Chatbot training Engine
+## Step 3: Create a shell on Chatbot training Engine
 
-## Step 5: Installation Guide
+## Step 4: Installation Guide
 
 ## Conclusion
 
