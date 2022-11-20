@@ -1,6 +1,6 @@
 # forough
 
-An interface to interact with NLP-based chat bot
+Forough is an interface to interact with NLP-based chat bot. Forough (Persian: فروغ ) is a Persian feminine given name meaning brightness. It is also the name of influential Iranian poet (Forough Farrokhzad). This project is named forough after the Iranian poet symbolizing the ability of the chatbot to process natural language.
 
 ## Project Overview
 The ChatterBot library combines language corpora, text processing, machine learning algorithms, and data storage and retrieval to allow you to build flexible chatbots.
@@ -154,6 +154,50 @@ To train your chatbot to respond to industry-relevant questions, you’ll probab
 
 ## Step 3: Create a shell on Chatbot training Engine
 
+ChatterBot has direct support for integration with Django’s ORM. It is relatively easy to use ChatterBot within your Django application to create conversational pages and endpoints.
+### Django Integration
+#### Install packages
+Begin by making sure that you have installed both <code>django</code> and <code>chatterbot</code>.
+
+```
+pip install django chatterbot
+```
+For more details on installing Django, see the [Django documentation](https://docs.djangoproject.com/en/dev/intro/install/).
+
+#### Installed Apps
+Add <code>chatterbot.ext.django_chatterbot</code> to your <code>INSTALLED_APPS</code> in the <code>settings.py</code> file of your Django project.
+
+```
+INSTALLED_APPS = (
+    # ...
+    'chatterbot.ext.django_chatterbot',
+)
+```
+
+#### Migrations
+
+You can run the Django database migrations for your chat bot with the following command.
+```
+python manage.py migrate django_chatterbot
+
+```
+### Chatterbot Django Settings
+You can edit the ChatterBot configuration through your Django settings.py file.
+```
+CHATTERBOT = {
+    'name': 'Tech Support Bot',
+    'logic_adapters': [
+        'chatterbot.logic.MathematicalEvaluation',
+        'chatterbot.logic.TimeLogicAdapter',
+        'chatterbot.logic.BestMatch'
+    ]
+}
+```
+Any setting that gets set in the CHATTERBOT dictionary will be passed to the chat bot that powers your django app.
+#### Additional Django settings
+
+  <code>django_app_name</code> [default: ‘django_chatterbot’] The Django app name to look up the models from.
+
 ## Step 4: Installation Guide
 
 create a virtual environment
@@ -182,6 +226,8 @@ python .\forough\manage.py runserver 127.0.0.1:8001
 
 ## References
 <ol>
-  <li> [ChatterBot: Build a Chatbot With Python](https://realpython.com/build-a-chatbot-python-chatterbot/#project-overview)
+  <li>[ChatterBot: Build a Chatbot With Python](https://realpython.com/build-a-chatbot-python-chatterbot/#project-overview)
+  </li>
+  <li>[ChatterBot Django Integration](https://chatterbot.readthedocs.io/en/stable/django/index.html)
   </li>
   </ol>
