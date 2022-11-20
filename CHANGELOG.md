@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 ## v0.0.2-dev - Unreleased - 2022-11-02
 
 ### Improvements
+- Add Train Command
 - Define chat api
 - Add CHANGELOG
 - Improve Setting by extend_setting

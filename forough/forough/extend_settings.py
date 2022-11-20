@@ -178,8 +178,8 @@ EMAIL_HOST_PASSWORD = '************'
 CHATTERBOT = {
     'name': 'Tech Support Bot',
     'logic_adapters': [
-        'chatterbot.logic.MathematicalEvaluation',
-        'chatterbot.logic.TimeLogicAdapter',
+        # 'chatterbot.logic.MathematicalEvaluation',
+        # 'chatterbot.logic.TimeLogicAdapter',
         'chatterbot.logic.BestMatch'
     ]
 }
