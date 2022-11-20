@@ -156,6 +156,26 @@ To train your chatbot to respond to industry-relevant questions, you’ll probab
 
 ## Step 4: Installation Guide
 
+create a virtual environment
+```
+PS> python -m venv venv
+```
+
+Activate the virtual environment
+```
+PS> .\venv\Scripts\activate
+```
+
+install library
+```
+(venv) PS> python -m pip install r requirements.txt
+```
+
+run server
+```
+python .\forough\manage.py runserver 127.0.0.1:8001
+```
+
 ## Conclusion
 
 ## Next Steps

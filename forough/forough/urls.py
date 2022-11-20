@@ -24,6 +24,6 @@ from .views import ChatterBotAppView, ChatterBotApiView
 
 
 urlpatterns += [
-    path(r'^$', ChatterBotAppView.as_view(), name='main'),
-    path(r'^api/chatterbot/', ChatterBotApiView.as_view(), name='chatterbot'),
+    path('', ChatterBotAppView.as_view(), name='main'),
+    path('api/chatterbot/', ChatterBotApiView.as_view(), name='chatterbot'),
 ]
