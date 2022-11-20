@@ -9,9 +9,6 @@ All notable changes to this project will be documented in this file.
 - Add CHANGELOG
 - Improve Setting by extend_setting
 
-
-
-
 ### Bug Fixes
 - Fix permission_required in view generator
 - Fix package Setup 

@@ -1,0 +1,5 @@
+https://bitbucket.org/voron-raven/chat/src/master/core/management/commands/train.py
+https://bitbucket.org/voron-raven/chat/src/master/chat/settings.py
+
+
+https://lightrun.com/answers/gunthercox-chatterbot-training-django-chatterbot
