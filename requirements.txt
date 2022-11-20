@@ -6,3 +6,4 @@ pillow
 django-jalali-date
 pytz
 django-debug-toolbar
+logging_json

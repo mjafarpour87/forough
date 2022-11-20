@@ -5,6 +5,10 @@ from django.http import JsonResponse
 from chatterbot import ChatBot
 from chatterbot.ext.django_chatterbot import settings
 
+from .extend_settings import LOGGING
+import logging
+logging.config.dictConfig(LOGGING)
+logger = logging.getLogger('app')
 
 class ChatterBotAppView(TemplateView):
     template_name = 'app.html'
@@ -33,8 +37,20 @@ class ChatterBotApiView(View):
             }, status=400)
 
         response = self.chatterbot.get_response(input_data)
+        logger.debug(type(response))
+        logger.debug(response.search_text)
+        logger.debug(response.persona)
+        logger.debug(response.tags)
+        logger.debug(response.in_response_to)
+        logger.debug(response.search_in_response_to)
+        logger.debug(response.confidence)
+
 
         response_data = response.serialize()
+        logger.debug(response_data)
+        if response.confidence < 0.5 :
+            response_data['text'] = 'در این حد بلد نیستم'
+
 
         return JsonResponse(response_data, status=200)
 
