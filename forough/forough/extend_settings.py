@@ -149,8 +149,7 @@ MIDDLEWARE += [
 
 # My apps
 INSTALLED_APPS += [
-    'users',
-    'organization',
+    'django_cuser',
     'corpus',
 ]
 
@@ -213,7 +212,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 LOGIN_URL = '/users/accounts/login'
 LOGIN_REDIRECT_URL = "dashboard"
 LOGOUT_REDIRECT_URL = "dashboard"
-AUTH_USER_MODEL = "users.CustomUser"  
+AUTH_USER_MODEL = "django_cuser.CustomUser"  
 
 
 
