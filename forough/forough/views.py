@@ -10,6 +10,10 @@ import logging
 logging.config.dictConfig(LOGGING)
 logger = logging.getLogger('app')
 
+class page_chat(TemplateView):
+    template_name = 'page_chat.html'
+
+
 class ChatterBotAppView(TemplateView):
     template_name = 'app.html'
 

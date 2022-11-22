@@ -12,11 +12,8 @@ All notable changes to this project will be documented in this file.
 - Improve Setting by extend_setting
 
 ### Bug Fixes
-- Fix permission_required in view generator
-- Fix package Setup 
-- Fix Error Reverse accessor 'Group.user_set' for 'auth.User.groups' clashes with reverse accessor for 'django_cuser.CustomUser.groups'.
-- Fix path of locale directory
-- Fix model_verbose_name bug in lowcode
+- Fix Soft UI Dashboard Template
+
 
 ## v0.0.1 - 2022-08-26
 

@@ -25,10 +25,10 @@ urlpatterns = i18n_patterns(
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-from .views import ChatterBotAppView, ChatterBotApiView
+from .views import ChatterBotAppView, ChatterBotApiView, page_chat
 
 
 urlpatterns += [
-    path('', ChatterBotAppView.as_view(), name='main'),
+    path('', page_chat.as_view(), name='page_chat'),
     path('api/chatterbot/', ChatterBotApiView.as_view(), name='chatterbot'),
 ]
