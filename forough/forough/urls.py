@@ -20,6 +20,7 @@ urlpatterns = i18n_patterns(
     path('__debug__/', include('debug_toolbar.urls')),
     path('users/', include('django_cuser.urls')),
     path('corpus/', include('corpus.urls')),
+    path('chatstatement/', include('chatstatement.urls')),
     # path('', views.main_page, name = 'main_page')
 
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

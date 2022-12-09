@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 ### Improvements
 - Improve django_cuser 
 - Add model of chatstatement app
-- Add Train Command
+- Add Train, TrainFile Command
 - Define chat api
 - Add CHANGELOG
 - Improve Setting by extend_setting

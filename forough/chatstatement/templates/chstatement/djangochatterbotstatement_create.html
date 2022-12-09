@@ -1,0 +1,32 @@
+
+<!-- This Create by Ehsan Bitaraf.  -->
+<!-- Version 1.0.0 -->
+
+{% extends 'index.html' %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>{% translate 'New django chatterbot statement' %}</h1>
+
+<form  method="post">
+{% csrf_token %}
+{{ form|crispy }}
+<p></p>
+<input  type="submit"  class="btn btn-primary" value="{% translate 'Submit' %}"  />
+</form>
+
+{% if 'view_type' in request.session %}
+{% if request.session.view_type == 'table' %}
+    <p><a href="{% url 'djangochatterbotstatement_list' %}">{% translate "Back" %}</a></p>
+{% else %}
+    <p><a href="{% url 'djangochatterbotstatement_list_card' %}">{% translate "Back" %}</a></p>
+{% endif %}
+{% else %}
+<p>{% translate "Error in config session" %}</p>
+{% endif %}
+
+{% endblock %}
+
+
+        

@@ -1,0 +1,172 @@
+<!-- This Create by Ehsan Bitaraf.  -->
+<!-- Version 1.0.1 -->
+{% extends 'index.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% load crispy_forms_field %}
+{% block content %}
+
+
+<div class="container">
+<h1>{% translate 'List of django chatterbot statements' %}</h1>
+
+{% if perms.chatstatement.add_DjangoChatterbotStatement %}
+<p><a href="{% url 'djangochatterbotstatement_create' %}">{% translate 'New django chatterbot statement' %}</a></p>
+{% endif %}
+
+<p>
+    <a href="{% url 'djangochatterbotstatement_create' %}">{% translate 'Import django chatterbot statements List' %}</a>
+</p>
+
+{% if 'view_type' in request.session %}
+{% if request.session.view_type == 'table' %}
+    <p><a href="{% url 'djangochatterbotstatement_list_card' %}">{% translate "Change to card view" %}</a></p>
+{% else %}
+    <p><a href="{% url 'djangochatterbotstatement_list' %}">{% translate "Change to table view" %}</a></p>
+{% endif %}
+{% else %}
+    <p>{% translate "Error in config session" %}</p>
+{% endif %}
+
+
+
+<!-- Search Panel -->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            {% translate "Search" %}
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+            <form method="get">
+                <div class="row">
+                {% for field in filter.form.visible_fields %}
+                    <div class="col-sm-3">
+                        <div class="form-floating mb-3">
+                        {% crispy_field field 'class' 'form-control' %}
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        </div>
+                    </div>
+                {% endfor %}
+                    <div class="col-sm-3">
+                        <button type="submit" class = 'btn btn-primary mb-3'>{% translate "Search" %}</button>
+                    </div>
+                </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            {% translate "Order" %}
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+                <div class="row">
+                <div class="col-sm-3">
+                    <select class="form-select form-select-sm" name="orderby">
+                        {% for field in filter.form.visible_fields %}
+                        <option value='{{ field.name }}'> 
+                            {% translate field.label %}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <select class="form-select form-select-sm" name="order">
+                        <option value='asc'>{% translate 'Ascending' %}</option>
+                        <option value='des'>{% translate 'Descending' %}</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit"  class = 'btn btn-primary mb-3' >{% translate "Order" %}</button>
+                </div>
+                </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    
+</div>  
+
+<p></p>
+
+<p></p>
+
+{% if filter.qs %}
+<div class="object-list">
+<div class="row">
+        {% for o in filter.qs %}
+        <div class="col-sm-3">
+            <div class="card mb-3" >
+                <img src="{% static 'general/card-header.svg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ o.text }}</h5>
+
+                    <p class='card-text'><small class='text-muted'><strong>{% translate 'created at' %}</strong>: {{o.created_at}}</small></p>
+<p class='card-text'><small class='text-muted'><strong>{% translate 'conversation' %}</strong>: {{o.conversation}}</small></p>
+<p class='card-text'><small class='text-muted'><strong>{% translate 'persona' %}</strong>: {{o.persona}}</small></p>
+<p class='card-text'><small class='text-muted'><strong>{% translate 'search text' %}</strong>: {{o.search_text}}</small></p>
+<p class='card-text'><small class='text-muted'><strong>{% translate 'search in response to' %}</strong>: {{o.search_in_response_to}}</small></p>
+<p class='card-text'><small class='text-muted'><strong>{% translate 'text' %}</strong>: {{o.text}}</small></p>
+
+                </div>
+                <div class="card-footer">
+                    {% if perms.chatstatement.view_DjangoChatterbotStatement %}
+                    <a  href="{% url 'djangochatterbotstatement_detail'  o.id  %}" class="btn btn-primary">{% translate "Details" %}</a>
+                    {% endif %}
+                    {% if perms.chatstatement.change_DjangoChatterbotStatement %}
+                    <a  href="{% url 'djangochatterbotstatement_update'  o.id  %}" class="btn btn-primary">{% translate "Edit" %}</a>
+                    {% endif %}
+                    {% if perms.chatstatement.delete_DjangoChatterbotStatement %}
+                    <a  href="{% url 'djangochatterbotstatement_delete'  o.id  %}" class="btn btn-primary">{% translate "Delete" %}</a>
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+            <p class="pagination">
+                <a class="next-page" href="?page={{ page_obj.next_page_number }}">{% translate "More" %}...</a>
+            </p>
+        {% endif %}
+
+</div>
+
+    </div>
+{% else %}
+    <p>{% translate "There are no any items !!!" %}</p>
+{% endif %}
+</div>
+
+<!-- Ajax Paging -->
+<!-- jQuery CDN hosted by Google -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- jScroll plug-in CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
+<script>
+jQuery(function ($) {
+    var $list = $('.object-list');
+    $list.jscroll({
+        loadingHtml: '<div class="text-center">' +
+            '<img src="{% static "loading.gif" %}" alt="Loading" />' +
+            '</div>',
+        padding: 100,
+        pagingSelector: '.pagination',
+        nextSelector: 'a.next-page:last',
+        contentSelector: '.card,.pagination'
+    });
+});
+</script>
+
+{% endblock %}
+
+
+        

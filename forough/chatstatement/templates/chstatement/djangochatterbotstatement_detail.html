@@ -1,0 +1,37 @@
+<!-- This Create by Ehsan Bitaraf.  -->
+<!-- Version 1.0.0 -->
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% translate 'django chatterbot statement Details' %}</h1>
+
+{% if object.created_at  %}<p><strong>{% translate 'created at' %}</strong>: {{object.created_at}}</p>{% endif %}
+{% if object.conversation  %}<p><strong>{% translate 'conversation' %}</strong>: {{object.conversation}}</p>{% endif %}
+{% if object.in_response_to  %}<p><strong>{% translate 'in response to' %}</strong>: {{object.in_response_to}}</p>{% endif %}
+{% if object.persona  %}<p><strong>{% translate 'persona' %}</strong>: {{object.persona}}</p>{% endif %}
+{% if object.search_text  %}<p><strong>{% translate 'search text' %}</strong>: {{object.search_text}}</p>{% endif %}
+{% if object.search_in_response_to  %}<p><strong>{% translate 'search in response to' %}</strong>: {{object.search_in_response_to}}</p>{% endif %}
+{% if object.text  %}<p><strong>{% translate 'text' %}</strong>: {{object.text}}</p>{% endif %}
+
+
+<div>
+    {% if perms.chatstatement.change_DjangoChatterbotStatement %}
+        <a  href="{% url 'djangochatterbotstatement_update'  object.id  %}" class="btn btn-primary">{% translate "Edit" %}</a>
+    {% endif %}
+    {% if perms.chatstatement.delete_DjangoChatterbotStatement %}
+        <a  href="{% url 'djangochatterbotstatement_delete'  object.id  %}" class="btn btn-primary">{% translate "Delete" %}</a>
+    {% endif %}
+</div>
+
+{% if 'view_type' in request.session %}
+{% if request.session.view_type == 'table' %}
+    <p><a href="{% url 'djangochatterbotstatement_list' %}">{% translate "Back" %}</a></p>
+{% else %}
+    <p><a href="{% url 'djangochatterbotstatement_list_card' %}">{% translate "Back" %}</a></p>
+{% endif %}
+{% else %}
+<p>{% translate "Error in config session" %}</p>
+{% endif %}
+
+{% endblock %}

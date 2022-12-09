@@ -151,6 +151,7 @@ MIDDLEWARE += [
 INSTALLED_APPS += [
     'django_cuser',
     'corpus',
+    'chatstatement',
 ]
 
 

@@ -14,6 +14,7 @@ class CorpusCategory(models.Model):
 
     class Meta:
         db_table = 'corpus_category'
+        managed = False
 
 
 class CorpusConversation(models.Model):
@@ -23,6 +24,7 @@ class CorpusConversation(models.Model):
 
     class Meta:
         db_table = 'corpus_conversation'
+        managed = False
 
 
 
@@ -37,6 +39,7 @@ class DjangoChatterbotStatement(models.Model):
 
     class Meta:
         db_table = 'django_chatterbot_statement'
+        managed = False
 
 
 class DjangoChatterbotStatementTags(models.Model):
@@ -46,6 +49,7 @@ class DjangoChatterbotStatementTags(models.Model):
     class Meta:
         db_table = 'django_chatterbot_statement_tags'
         unique_together = (('statement', 'tag'),)
+        managed = False
 
 
 class DjangoChatterbotTag(models.Model):
@@ -53,4 +57,5 @@ class DjangoChatterbotTag(models.Model):
 
     class Meta:
         db_table = 'django_chatterbot_tag'
+        managed = False
 
