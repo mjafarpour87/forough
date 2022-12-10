@@ -69,6 +69,21 @@ class ConversationDelete(PermissionRequiredMixin,DeleteView):
     template_name = 'conversation_confirm_delete.html'
     success_url = reverse_lazy('conversation_list')
 
+class ConversationTrain(PermissionRequiredMixin,DetailView):
+    permission_required = 'conversation.view_Conversation'  
+    model = Conversation
+    template_name = 'conversation_train.html'
+   
+
+    # override context data
+    def get_context_data(self, *args, **kwargs):
+        context = super(ConversationTrain,
+                self).get_context_data(*args, **kwargs)
+        # add extra field
+        context["category"] = "MISC"
+        print(context)
+        return context
+
 #endregion
 
 

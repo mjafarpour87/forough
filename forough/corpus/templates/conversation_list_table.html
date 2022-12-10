@@ -41,9 +41,13 @@
 <td>{{ t.statement }}</td>
 <td>{{ t.response }}</td>
 <td>
-<a  href="{% url "conversation_detail"  t.id  %}">{% translate "Details" %}</a>
-<a  href="{% url "conversation_update"  t.id  %}">{% translate "Edit" %}</a>
-<a  href="{% url "conversation_delete"  t.id  %}">{% translate "Delete" %}</a>
+<a  href="{% url 'conversation_detail'  t.id  %}">{% translate "Details" %}</a>
+<a  href="{% url 'conversation_update'  t.id  %}">{% translate "Edit" %}</a>
+<a  href="{% url 'conversation_delete'  t.id  %}">{% translate "Delete" %}</a>
+
+<a  href="{% url 'conversation_train'  t.id  %}">{% translate "Train" %}</a>
+
+
 </td>
 </tr>
 {% endfor %}

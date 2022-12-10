@@ -18,4 +18,6 @@ urlpatterns += [
         path('conversation/create', views.ConversationCreate.as_view(), name='conversation_create'),
         path('conversation/update/<int:pk>', views.ConversationUpdate.as_view(), name='conversation_update'),
         path('conversation/delete/<int:pk>', views.ConversationDelete.as_view(), name='conversation_delete'),
+
+        path('conversation/train/<int:pk>', views.ConversationTrain.as_view(), name='conversation_train'),
 ]   
