@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 ## v0.0.2-dev - Unreleased - 2022-11-02
 
 ### Improvements
+- Improve Setting file
 - Add ConversationCreateFromChatStatment
 - Add conversation_train 
 - Improve django_cuser 

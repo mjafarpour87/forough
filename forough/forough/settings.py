@@ -150,3 +150,35 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# Extend Setting 
+from .settingsextended.logging_setting import *
+from .settingsextended.app_middleware import *
+from .settingsextended.template_setting import *
+from .settingsextended.authentication_setting import *
+from .settingsextended.file_setting import *
+from .settingsextended.cache_setting import *
+from .settingsextended.email_setting import *
+
+# print last setting and configuration
+logger.debug(f"------------------DEBUG = {DEBUG}" )
+logger.debug(f"BASE_DIR         : {BASE_DIR}")
+logger.debug(f"LOCALE_PATHS     : {LOCALE_PATHS}")
+if DEBUG:
+    logger.debug(f"STATICFILES_DIRS : {STATICFILES_DIRS}")
+else:
+    logger.debug(f"STATIC_ROOT      : {STATIC_ROOT}")
+logger.debug(f"STATIC_URL       : {STATIC_URL}")
+logger.debug(f"MEDIA_URL        : {MEDIA_URL}")
+logger.debug(f"MEDIA_ROOT       : {MEDIA_ROOT}")
+# logger.debug(template_path_list)
+
+# Chatterbot Django Settings
+CHATTERBOT = {
+    'name': 'Tech Support Bot',
+    'logic_adapters': [
+        # 'chatterbot.logic.MathematicalEvaluation',
+        # 'chatterbot.logic.TimeLogicAdapter',
+        'chatterbot.logic.BestMatch'
+    ]
+}

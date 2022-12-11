@@ -5,7 +5,7 @@ from django.http import JsonResponse
 from chatterbot import ChatBot
 from chatterbot.ext.django_chatterbot import settings
 
-from .extend_settings import LOGGING
+from .settings import LOGGING
 import logging
 logging.config.dictConfig(LOGGING)
 logger = logging.getLogger('app')

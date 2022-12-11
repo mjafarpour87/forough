@@ -139,8 +139,8 @@
 
         {% if page_obj.has_next %}
             <p class="pagination">
-                <p>...</p>
-                <a class="next-page" href="?page={{ page_obj.next_page_number }}">{% translate "More" %}...</a>
+                <p></p>
+                <a href="?page={{ page_obj.next_page_number }}" class="btn btn-primary btn-lg btn-block" >{% translate "More" %}...</a>
             </p>
         {% endif %}
 
