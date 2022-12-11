@@ -108,12 +108,12 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ o.text }}</h5>
 
-                    <p class='card-text'><small class='text-muted'><strong>{% translate 'created at' %}</strong>: {{o.created_at}}</small></p>
-<p class='card-text'><small class='text-muted'><strong>{% translate 'conversation' %}</strong>: {{o.conversation}}</small></p>
-<p class='card-text'><small class='text-muted'><strong>{% translate 'persona' %}</strong>: {{o.persona}}</small></p>
-<p class='card-text'><small class='text-muted'><strong>{% translate 'search text' %}</strong>: {{o.search_text}}</small></p>
-<p class='card-text'><small class='text-muted'><strong>{% translate 'search in response to' %}</strong>: {{o.search_in_response_to}}</small></p>
-<p class='card-text'><small class='text-muted'><strong>{% translate 'text' %}</strong>: {{o.text}}</small></p>
+                    <p class='card-text'><small class='text-muted'><strong>{% translate 'in response to' %}</strong>: {{o.in_response_to}}</small></p>
+                    <p class='card-text'><small class='text-muted'><strong>{% translate 'conversation' %}</strong>: {{o.conversation}}</small></p>
+                    <!-- <p class='card-text'><small class='text-muted'><strong>{% translate 'persona' %}</strong>: {{o.persona}}</small></p>
+                    <p class='card-text'><small class='text-muted'><strong>{% translate 'search text' %}</strong>: {{o.search_text}}</small></p>
+                    <p class='card-text'><small class='text-muted'><strong>{% translate 'search in response to' %}</strong>: {{o.search_in_response_to}}</small></p> -->
+                    <p class='card-text'><small class='text-muted'><strong>{% translate 'text' %}</strong>: {{o.text}}</small></p>
 
                 </div>
                 <div class="card-footer">
@@ -125,6 +125,11 @@
                     {% endif %}
                     {% if perms.chatstatement.delete_DjangoChatterbotStatement %}
                     <a  href="{% url 'djangochatterbotstatement_delete'  o.id  %}" class="btn btn-primary">{% translate "Delete" %}</a>
+                    {% endif %}
+
+
+                    {% if perms.chatstatement.change_DjangoChatterbotStatement and  o.conversation == '' %}
+                    <a  href="{% url 'djangochatterbotstatement_update'  o.id  %}" class="btn btn-primary">{% translate "Add To Corpus" %}</a>
                     {% endif %}
                 </div>
             </div>

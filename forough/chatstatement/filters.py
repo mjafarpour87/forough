@@ -7,4 +7,4 @@ from .models import DjangoChatterbotStatement
 class DjangoChatterbotStatementFilter(django_filters.FilterSet):
     class Meta:
         model = DjangoChatterbotStatement
-        fields = ['id',  ]
+        fields = ['conversation', 'in_response_to', 'text'  ]

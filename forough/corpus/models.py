@@ -13,5 +13,7 @@ class Conversation(models.Model):
     category =  models.ForeignKey(Category,related_name ='categories', on_delete=models.RESTRICT)
     statement = models.CharField(max_length=200,verbose_name=_('Statement'))
     response = models.CharField(max_length=300,verbose_name=_('Response'))
+    train = models.IntegerField(default = 0)
+    
     def __str__(self):
-        return self.Statement
+        return self.statement

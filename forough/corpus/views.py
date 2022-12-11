@@ -8,6 +8,9 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse,reverse_lazy
 from .models import Category,Conversation
 
+from chatterbot import ChatBot
+from chatterbot.ext.django_chatterbot import settings
+from chatterbot.trainers import ListTrainer
 
 # region Conversation
 class ConversationListTable(LoginRequiredMixin,ListView): 
@@ -80,7 +83,22 @@ class ConversationTrain(PermissionRequiredMixin,DetailView):
         context = super(ConversationTrain,
                 self).get_context_data(*args, **kwargs)
         # add extra field
-        context["category"] = "MISC"
+
+
+        chatterbot = ChatBot(**settings.CHATTERBOT)
+        trainer = ListTrainer(chatterbot)
+
+        c = Conversation.objects.first()
+        c.train = 1
+        try:
+
+            trainer.train([
+                c.statement,
+                c.response,
+            ])
+            c.save()
+        except:
+            context["category_msg"] = "MISC"
         print(context)
         return context
 

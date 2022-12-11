@@ -5,8 +5,12 @@
 <h1>{% translate "Conversation Details" %}</h1>
 
 <p><strong>{% translate "category" %}</strong>: {{object.category}}</p>
-<p><strong>{% translate "Statement" %}</strong>: {{object.statement}}</p>
-<p><strong>{% translate "Response" %}</strong>: {{object.response}}</p>
+
+<p><strong>{% translate "category" %}</strong>: {{category}}</p>
+
+{% if category_msg =='' %}
+<p><strong>{% translate "statement" %}</strong>: {{object.statement}}</p>
+<p><strong>{% translate "response" %}</strong>: {{object.response}}</p>
 
 <div>
     <a  href="{% url 'conversation_update'  object.id  %}" class="btn btn-primary">{% translate "Edit" %}</a>

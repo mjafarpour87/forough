@@ -25,9 +25,9 @@
 
 {% if 'view_type' in request.session %}
   {% if request.session.view_type == 'table' %}
-    <p><a href="{% url 'organization_list' %}">{% translate "Back" %}</a></p>
+    <p><a href="{% url 'conversation_list' %}">{% translate "Back" %}</a></p>
   {% else %}
-    <p><a href="{% url 'organization_list_card' %}">{% translate "Back" %}</a></p>
+    <p><a href="{% url 'conversation_list_card' %}">{% translate "Back" %}</a></p>
   {% endif %}
 {% else %}
 <p>{% translate "Error in config session" %}</p>
