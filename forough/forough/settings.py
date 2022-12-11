@@ -153,7 +153,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Extend Setting 
 from .settingsextended.logging_setting import *
-from .settingsextended.app_middleware import *
+from .settingsextended.app_middleware_setting import *
 from .settingsextended.template_setting import *
 from .settingsextended.authentication_setting import *
 from .settingsextended.file_setting import *
