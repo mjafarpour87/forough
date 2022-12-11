@@ -8,6 +8,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse,reverse_lazy
 from .models import Category,Conversation
 
+
 from chatterbot import ChatBot
 from chatterbot.ext.django_chatterbot import settings
 from chatterbot.trainers import ListTrainer
@@ -101,6 +102,27 @@ class ConversationTrain(PermissionRequiredMixin,DetailView):
             context["category_msg"] = "MISC"
         print(context)
         return context
+
+
+from chatstatement.models import DjangoChatterbotStatement
+class ConversationCreateFromChatStatment(PermissionRequiredMixin,CreateView): 
+    permission_required = 'conversation.add_Conversation' 
+    model = Conversation
+    template_name = 'conversation_create_from_chatstatment.html'
+    fields = ["category" ,"statement" , "response"]
+    success_url = reverse_lazy('djangochatterbotstatement_list')
+
+    def get_initial(self):
+        chatstatment_id = self.kwargs.get('pk')
+        o = DjangoChatterbotStatement.objects.filter(id = chatstatment_id).values()
+        return {
+            'statement': o[0]['in_response_to'] ,
+            'response' : o[0]['text'],
+        }
+
+
+
+
 
 #endregion
 

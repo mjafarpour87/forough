@@ -135,6 +135,11 @@
         {% if perms.chatstatement.delete_DjangoChatterbotStatement %}
             <a  href="{% url 'djangochatterbotstatement_delete'  o.id  %}">{% translate "Delete" %}</a>
         {% endif %}
+
+        {% if perms.chatstatement.change_DjangoChatterbotStatement and  o.conversation == '' %}
+            <a  href="{% url 'conversation_create_from_chatstatment'  o.id  %}" >{% translate "Add To Corpus" %}</a>
+        {% endif %}
+
 </td>
 </tr>
 {% endfor %}

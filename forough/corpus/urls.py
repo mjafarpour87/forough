@@ -20,4 +20,5 @@ urlpatterns += [
         path('conversation/delete/<int:pk>', views.ConversationDelete.as_view(), name='conversation_delete'),
 
         path('conversation/train/<int:pk>', views.ConversationTrain.as_view(), name='conversation_train'),
+        path('conversation/createfrom/<int:pk>', views.ConversationCreateFromChatStatment.as_view(), name='conversation_create_from_chatstatment'),
 ]   

@@ -9,22 +9,22 @@ from django.db import models
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 
-class CorpusCategory(models.Model):
-    name = models.CharField(max_length=50)
+# class CorpusCategory(models.Model):
+#     name = models.CharField(max_length=50)
 
-    class Meta:
-        db_table = 'corpus_category'
-        managed = False
+#     class Meta:
+#         db_table = 'corpus_category'
+#         managed = False
 
 
-class CorpusConversation(models.Model):
-    statement = models.CharField(max_length=200)
-    response = models.CharField(max_length=300)
-    category = models.ForeignKey(CorpusCategory, models.DO_NOTHING)
+# class CorpusConversation(models.Model):
+#     statement = models.CharField(max_length=200)
+#     response = models.CharField(max_length=300)
+#     category = models.ForeignKey(CorpusCategory, models.DO_NOTHING)
 
-    class Meta:
-        db_table = 'corpus_conversation'
-        managed = False
+#     class Meta:
+#         db_table = 'corpus_conversation'
+#         managed = False
 
 
 
@@ -40,6 +40,7 @@ class DjangoChatterbotStatement(models.Model):
     class Meta:
         db_table = 'django_chatterbot_statement'
         managed = False
+
 
 
 class DjangoChatterbotStatementTags(models.Model):

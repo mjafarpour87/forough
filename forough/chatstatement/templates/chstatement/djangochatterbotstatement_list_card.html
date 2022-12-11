@@ -129,7 +129,7 @@
 
 
                     {% if perms.chatstatement.change_DjangoChatterbotStatement and  o.conversation == '' %}
-                    <a  href="{% url 'djangochatterbotstatement_update'  o.id  %}" class="btn btn-primary">{% translate "Add To Corpus" %}</a>
+                    <a  href="{% url 'conversation_create_from_chatstatment'  o.id  %}" class="btn btn-primary">{% translate "Add To Corpus" %}</a>
                     {% endif %}
                 </div>
             </div>
