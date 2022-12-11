@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 - Fix Soft UI Dashboard Template
+- Fix Pagging Bug
 
 
 ## v0.0.1 - 2022-08-26
