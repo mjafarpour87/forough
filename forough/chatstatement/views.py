@@ -20,7 +20,7 @@ class DjangoChatterbotStatementListTable(LoginRequiredMixin,FilterView):
     model = DjangoChatterbotStatement
     template_name = 'chstatement/djangochatterbotstatement_list_table.html'
     context_object_name = 'ObjectList'
-    paginate_by = 10
+    paginate_by = 5
     filterset_class = DjangoChatterbotStatementFilter
 
     def get_context_data(self, **kwargs):

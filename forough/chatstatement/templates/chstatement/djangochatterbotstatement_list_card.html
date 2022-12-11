@@ -101,7 +101,7 @@
 {% if filter.qs %}
 <div class="object-list">
 <div class="row">
-        {% for o in filter.qs %}
+    {% for o in object_list %}
         <div class="col-sm-3">
             <div class="card mb-3" >
                 <img src="{% static 'general/card-header.svg' %}" class="card-img-top" alt="...">
@@ -139,6 +139,7 @@
 
         {% if page_obj.has_next %}
             <p class="pagination">
+                <p>...</p>
                 <a class="next-page" href="?page={{ page_obj.next_page_number }}">{% translate "More" %}...</a>
             </p>
         {% endif %}
