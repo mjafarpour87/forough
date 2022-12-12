@@ -1,4 +1,5 @@
 chatterbot==1.0.4
+Django
 django-rosetta
 django-crispy-forms
 django_filter

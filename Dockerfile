@@ -4,6 +4,9 @@ FROM python:3.9
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
+
+MAINTAINER Ehsan Bitaraf <bitaraf.e@iums.ac.ir>
+
 COPY requirements.txt .
 # install python dependencies
 RUN pip install --upgrade pip
@@ -15,4 +18,4 @@ COPY . .
 RUN python manage.py migrate
 
 # gunicorn
-CMD ["gunicorn", "--config", "gunicorn-cfg.py", "core.wsgi"]
+CMD ["gunicorn", "--config", "gunicorn-cfg.py", "forough.wsgi"]
